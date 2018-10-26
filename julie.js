@@ -30,3 +30,13 @@
 // recipeOne.ingredientsArrayCreator ('Apple juice', .5,'Gallon', 'Juices');
 // recipeOne.ingredientsArrayCreator ('Cider spice', .25,'cup', 'Spices');
 // ===================
+
+/*
+10-25-18 
+ note to self: 
+-need to fix the css refs in about/list/menu htmls
+-don't touch index.html until saturday/after erin has pushed/merge, she is doing a bunch of updates in it
+-my homework to finish before saturday is to build the side dishes objects
+-homework for end of day saturday is render my menu list and have the remove function working (includes removing it from local storage (which might be it;s own function like the busmall shopping cart))
+*/
+
