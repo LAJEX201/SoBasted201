@@ -1,1 +1,1 @@
-'use strict';
+// 'use strict'; GO USE MediaDeviceInfo.JS
