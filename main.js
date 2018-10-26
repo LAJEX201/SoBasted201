@@ -10,9 +10,18 @@ var RecipesConstructor = function(name, servings, course){
   allRecipes.push(this);
 };
 
-var IngredientConstructor = function(name, quantity, unitOfMeasure, storeDepartment){
+var IngredientsConstructor = function (name, qty, measurementunit, location) {
   this.name = name;
-  this.quantity = quantity;
-  this.unitOfMeasure = unitOfMeasure;
-  this.storeDepartment = storeDepartment;
+  this.quantity = qty;
+  this.measurementunit = measurementunit;
+  this.location = location;
 };
+
+RecipesConstructor.prototype.ingredientsArrayCreator = function (name, qty, measurementunit, location) {
+  var ingredOne = new IngredientsConstructor (name, qty, measurementunit, location);
+  this.ingredients.push(ingredOne);
+};
+
+var recipeOne = new RecipesConstructor ('MJ Mulled Cider', 8, 'Drinks');
+recipeOne.ingredientsArrayCreator ('Apple juice', .5,'Gallon', 'Juices');
+recipeOne.ingredientsArrayCreator ('Cider spice', .25,'cup', 'Spices');
