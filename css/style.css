@@ -1,0 +1,180 @@
+/* Font Families */
+/* font-family: 'Simonetta', cursive;
+font-family: 'Shadows Into Light', cursive;
+font-family: 'Amatic SC', cursive;
+font-family: 'Satisfy', cursive;
+font-family: 'Handlee', cursive;
+font-family: 'Merienda', cursive;
+font-family: 'Neucha', cursive;
+font-family: 'Rock Salt', cursive;
+font-family: 'Over the Rainbow', cursive; */
+
+header {
+  text-align: center;
+  font-family: 'Simonetta', cursive;
+}
+
+header h1 {
+  font-size: 50px;
+}
+
+header h3 {
+  font-size: 20px;
+  margin-top: -15px;
+  margin-bottom: 10px;
+}
+
+nav hr:first-child{
+  margin-bottom: 15px;
+}
+
+header h2 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  width: 960px;
+  list-style-type: none;
+  padding-left: 0;
+  margin: auto;
+}
+
+nav ul li{
+  display: inline-block;
+  background-color: rgb(192,0,0);
+  width: 217px;
+  padding: 10px;
+  margin-top: -10px;
+  margin-bottom: -10px;
+  text-align: center;
+  font-size: 18px;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+body{
+  width: 960px;
+  margin: auto;
+  font-family: 'Simonetta', cursive;
+}
+
+body img{
+  width: 960px;
+}
+
+hr{
+  height: 1px;
+  background-color: rgb(247,150,70);
+}
+
+.course-title > h2{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 200px;
+  margin: auto;
+  text-align: center;
+}
+
+.course > ul{
+  padding: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.course > ul > li{
+  width: 305px;
+  height: 305px;
+  background-color: rgb(247,150,70);
+  display: inline-block;
+  list-style-type: none;
+  text-align: center;
+  color: white;
+  border-radius: 15px;
+}
+
+h5{
+  text-align: left;
+  margin-left: 50px;
+  margin-top: -1px;
+  font-style: italic;
+  font-size: 9px;
+}
+
+.course > ul > li > img {
+  width: 200px;
+  margin-left: 50px;
+  margin-right: 50px;
+  border: 3px solid rgb(192,0,0);
+  border-radius: 15px;
+}
+
+.course > ul > li > h4 {
+  margin-bottom: 5px;
+  margin-top: 12px;
+}
+
+.course > ul > :first-child{
+  margin-right: 19px;
+}
+
+.course > ul > :last-child{
+  margin-left: 19px;
+}
+
+.sel {
+  width: 100px;
+  float: left;
+  height: 23px;
+  margin-left: 50px;
+  margin-top: -8px;
+}
+
+input {
+  background-color: rgb(192,0,0);
+  color: white;
+  font-family: 'Simonetta', cursive;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 12px;
+  float: right;
+  margin-right: 50px;
+  margin-top: -8px;
+
+}
+
+div.photo-break {
+  width: 960px;
+  height: 4px;
+}
+
+div.photo-break img {
+  margin-top: -3px;
+}
+
+button {
+  background-color: rgb(133, 190, 100);
+  font-family: 'Simonetta', cursive;
+  color: white;
+  font-size: 25px;
+  margin-top: -3px;
+  width: 200px;
+  margin-left: 375px;
+  margin-bottom: 1px;
+  border-color: 1px solid white;
+}
+footer {
+  font-family: 'Simonetta', cursive;
+  text-align: center;
+}
+
+footer p:first-child {
+  font-size: 20px;
+}
+
+footer p:nth-child(2) , p:nth-child(3) {
+  margin-top: -12px;
+}
