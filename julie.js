@@ -2,24 +2,61 @@
 // =====================
 // 10-25-18 jl added to MAIN.JSON
 // ======================
-// 'use strict';
+'use strict';
 
-// var allRecipes = [];
+var allRecipes = [];
 
-// var RecipesConstructor = function(name, servings, course){
-//   this.name = name;
-//   this.servings = servings;
-//   this.course = course;
-//   this.ingredients = [];
-//   allRecipes.push(this);
-// };
+var RecipesConstructor = function(name, servings, course){
+  this.name = name;
+  this.servings = servings;
+  this.course = course;
+  this.ingredients = [];
+  allRecipes.push(this);
+};
 
-// var IngredientsConstructor = function (name, qty, measurementunit, location) {
-//   this.name = name;
-//   this.quantity = qty;
-//   this.measurementunit = measurementunit;
-//   this.location = location;
-// };
+var IngredientsConstructor = function (name, qty, measurementunit, location) {
+  this.name = name;
+  this.quantity = qty;
+  this.measurementunit = measurementunit;
+  this.location = location;
+};
+
+RecipesConstructor.prototype.ingredientsArrayCreator = function (name, qty, measurementunit, location) {
+  var ingredOne = new IngredientsConstructor (name, qty, measurementunit, location);
+  this.ingredients.push(ingredOne);
+};
+
+var Menu = function(recipe) {
+  // this.recipe is an array of menuItem instances.
+  this.recipe = recipe;
+};
+Menu.prototype.addItem = function(name, course, servings) {
+  var newItems = new MenuItem(name, course, servings);
+  this.recipe.push(newItems);
+};
+
+Menu.prototype.removeItem = function(prod) {
+  // TODO: Fill in this instance method to remove one item from the cart.
+  // Note: You will have to decide what kind of parameter to pass in here!
+  //we choose the parameter name of the product
+  // var removeIndexNumber = 0;
+
+  for (var i = 0; i < this.recipe.length; i++) {
+    if (this.recipe[i].name === prod) {
+      this.recipe.splice(i,1);
+    }
+  }
+};
+
+var MenuItem = function(name, course, servings) {
+  this.name = name;
+  this.course = course;
+  this.servings = servings;
+};
+
+Menu.prototype.saveToLocalStorage = function() {
+  localStorage.setItem('menu', JSON.stringify(this.recipe));
+};
 
 // RecipesConstructor.prototype.ingredientsArrayCreator = function (name, qty, measurementunit, location) {
 //   var ingredOne = new IngredientsConstructor (name, qty, measurementunit, location);
@@ -60,6 +97,8 @@ Questions and concerns:
 -when ingredients without measurements, like "Kosher salt", do i omit, do i enter and just put in something of my choice, etc 
 we can't do a 'contains' function because there is a diff of cranberries and dried cranberries
 */
+
+/*10-27-18 jl added my own things for adding it to storage so i could test for remove from storage*/
 
 // =====================
 // 
@@ -112,7 +151,8 @@ recipeUltGreenBeanCass.ingredientsArrayCreator ('Kosher salt', 1, 'each', 'Spice
 recipeUltGreenBeanCass.ingredientsArrayCreator ('White button mushroom', .5, 'lb', 'Produce');
 recipeUltGreenBeanCass.ingredientsArrayCreator ('Soy sauce', 2, 'tsp', 'Condiments');
 recipeUltGreenBeanCass.ingredientsArrayCreator ('Lemon juice', 2, 'tsp', 'Produce');
-recipeUltGreenBeanCass.ingredientsArrayCreator ('Low-sodium chicken broth', 2, 'cup', 'Other-Grocery');recipeUltGreenBeanCass.ingredientsArrayCreator ('Heavy cream', 1.5, 'cup', 'Dairy');
+recipeUltGreenBeanCass.ingredientsArrayCreator ('Low-sodium chicken broth', 2, 'cup', 'Other-Grocery');
+recipeUltGreenBeanCass.ingredientsArrayCreator ('Heavy cream', 1.5, 'cup', 'Dairy');
 recipeUltGreenBeanCass.ingredientsArrayCreator ('Butter', 2, 'tbsp', 'Dairy');
 recipeUltGreenBeanCass.ingredientsArrayCreator ('Garlic', 2, 'each', 'Produce'); //2 cloves
 recipeUltGreenBeanCass.ingredientsArrayCreator ('Flour', .25, 'cup', 'Baking');
@@ -137,6 +177,104 @@ recipeCreamCorn.ingredientsArrayCreator ('Milk', 2, 'cup', 'Dairy');
 recipeCreamCorn.ingredientsArrayCreator ('Sugar', 2, 'tbsp', 'Spices');
 //omitted: water, for cooking corn
 
-// =====================
+// ======================
+// 
+// ======================
+
+
+//make table for menu html page
+
+var showMenuTable = function() {
+  var tableContainer = document.getElementById('menu-list');
+  //make header of table
+  var headerTrEl = document.createElement('tr');
+
+  var headElOne = document.createElement('th');
+  headElOne.textContent = 'REMOVE';
+  var headElTwo = document.createElement('th');
+  headElTwo.textContent = 'RECIPE';
+  var headElThree = document.createElement('th');
+  headElThree.textContent = 'COURSE';
+  var headElFour = document.createElement('th');
+  headElFour.textContent = '# OF SERVINGS';
+
+  headerTrEl.appendChild(headElOne);
+  headerTrEl.appendChild(headElTwo);
+  headerTrEl.appendChild(headElThree);
+  headerTrEl.appendChild(headElFour);
+
+  tableContainer.appendChild(headerTrEl);
+
+  //makes table details
+  //will have to adjust the length based on what is in the local storage
+  for (var i = 0; i < menu.recipe.length; i++){
+
+    var trEl = document.createElement('tr');
+    var tdLinkEl = document.createElement('td');
+    tdLinkEl.textContent = ('X');
+    tdLinkEl.classList.add('removelistitem');
+    tdLinkEl.id= menu.recipe[i].name;
+
+    var tdRecipeEl = document.createElement('td');
+    tdRecipeEl.textContent = menu.recipe[i].name;
+
+    var tdCourseEl = document.createElement('td');
+    tdCourseEl.textContent = menu.recipe[i].course;
+
+    var tdServEl = document.createElement('td');
+    tdServEl.textContent = menu.recipe[i].servings;
+
+    trEl.appendChild(tdLinkEl);
+    trEl.appendChild(tdRecipeEl);
+    trEl.appendChild(tdCourseEl);
+    trEl.appendChild(tdServEl);
+    tableContainer.appendChild(trEl);
+  }
+};
+
+//i tem put in menu so i could test (i wrote menu as the thing to add it to local storage)
+var loadMenuTable = function() {
+  var menuItems = JSON.parse(localStorage.getItem('menu')) || [];
+  menu = new Menu(menuItems);
+};
+
+var clearMenuTable = function() {
+  var rowToDelete = document.querySelectorAll('#menu-list tr');
+  for (var i = 0; i <= rowToDelete.length; i++) {
+    if (rowToDelete[i]) {
+      rowToDelete[i].remove();
+    }
+  }
+};
+
+
+//remove from local storage, erin says she's putting in the full obj
+
+var renderMenuTable = function() {
+  loadMenuTable();
+  clearMenuTable();
+  showMenuTable();
+};
+
+function removeItemFromMenu(event) {
+  if(event.target.classList.contains('removelistitem')) {
+    menu.removeItem(event.target.id);
+    menu.saveToLocalStorage();
+    renderMenuTable();
+  }
+}
+
+var menuclick = document.getElementById('menu-list');
+menuclick.addEventListener('click', removeItemFromMenu);
+//var menu;
+
+
+var menu = new Menu([]);
+menu.addItem(recipeCreamCorn.name,recipeCreamCorn.course,recipeCreamCorn.servings);
+menu.addItem(recipeUltGreenBeanCass.name,recipeUltGreenBeanCass.course,recipeUltGreenBeanCass.servings);
+menu.saveToLocalStorage();
+renderMenuTable();
+
+// ======================
 // 
 // ======================

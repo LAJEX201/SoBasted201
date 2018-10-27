@@ -19,4 +19,12 @@ REMINDER: only Julie is updating README, slack me your time you work on this pro
 10-26-18
   -Erin, 5 hours, played with index.html css, updated css links on other html pages, built main dish recipe objects in erin.js, added favicons to page tabs, cropped the hero image, and fixed spelling errors 
   -julie 1 hr worked on object creations
-  -anthony, _time_ object creations
+  -anthony 1 hr worked on object creations
+
+10-27-18 9-6 (minus 1 hr for lunch)
+  -group collaboration for consistency (like variable naming format) and measurement type (like 4 strips of bacon vs 1 lb of bacon)
+  -erin and xochil working on adding to local storage
+  -julie rendered menu and worked on removing from local storage/removing from list
+  -lorin combined all's JS's to main.js
+  -anthony rendered shopping list
+  
