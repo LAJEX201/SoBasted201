@@ -40,32 +40,32 @@ punchIngre = new IngredientBuilder('lemon-lime flavored carbonated beverage', 2,
 punchIngre = new IngredientBuilder('strawberry flavored mix', 6, 'ounces', 'baking', punch);
 punchIngre = new IngredientBuilder('canned pineapple juice', 46, 'fluid ounces', 'juice', punch);
 var pecans = new RecipesConstructor('Spiced Pecans', 16, 'appetizers');
-var pecanIngre = IngredientBuilder('salt', 4, 'teaspoon', 'spices', pecans);
-pecanIngre = IngredientBuilder('cayeene', 0.5, 'teaspoon', 'spices', pecans);
-pecanIngre = IngredientBuilder('white pepper', 1, 'teaspoon', 'spices', pecans);
-pecanIngre = IngredientBuilder('nutmeg', 1, 'teaspoon', 'spices', pecans);
-pecanIngre = IngredientBuilder('cloves', 1, 'teaspoon', 'spices', pecans);
-pecanIngre = IngredientBuilder('allspice', 1, 'teaspoon', 'spices', pecans);
-pecanIngre = IngredientBuilder('pecan halves', 4, 'cup', 'nuts', pecans);
-pecanIngre = IngredientBuilder('butter', 0.25, 'cup', 'dairy', pecans);
-pecanIngre = IngredientBuilder('dark maple syrup', 0.333, 'cup', 'condiments', pecans);
+var pecanIngre = new IngredientBuilder('salt', 4, 'teaspoon', 'spices', pecans);
+pecanIngre = new IngredientBuilder('cayeene', 0.5, 'teaspoon', 'spices', pecans);
+pecanIngre = new IngredientBuilder('white pepper', 1, 'teaspoon', 'spices', pecans);
+pecanIngre = new IngredientBuilder('nutmeg', 1, 'teaspoon', 'spices', pecans);
+pecanIngre = new IngredientBuilder('cloves', 1, 'teaspoon', 'spices', pecans);
+pecanIngre = new IngredientBuilder('allspice', 1, 'teaspoon', 'spices', pecans);
+pecanIngre = new IngredientBuilder('pecan halves', 4, 'cup', 'nuts', pecans);
+pecanIngre = new IngredientBuilder('butter', 0.25, 'cup', 'dairy', pecans);
+pecanIngre = new IngredientBuilder('dark maple syrup', 0.333, 'cup', 'condiments', pecans);
 var brie = new RecipesConstructor('Apple-Pecan Baked Brie', 10, 'beverages');
-var brieIngre = IngredientBuilder('butter', 1, 'tablespoon', 'dairy', brie);
-brieIngre = IngredientBuilder('small tart apple', 1, 'each', 'produce', brie);
-brieIngre = IngredientBuilder('dried cranberries', 0.333, 'cup', 'produce', brie);
-brieIngre = IngredientBuilder('chopped pecans', 0.25, 'cup', 'nuts', brie);
-brieIngre = IngredientBuilder('brown sugar', 1, 'tablespoon', 'baking', brie);
-brieIngre = IngredientBuilder('ground cinnamon', 0.25, 'teaspoon', 'spices', brie);
-brieIngre = IngredientBuilder('ground nutmeg', 1, 'dash', 'spices', brie);
-brieIngre = IngredientBuilder('Brie cheese', 8, 'ounces', 'dairy', brie);
-brieIngre = IngredientBuilder('crakers', 1, 'assorted', 'other grocery', brie);
+var brieIngre = new IngredientBuilder('butter', 1, 'tablespoon', 'dairy', brie);
+brieIngre = new IngredientBuilder('small tart apple', 1, 'each', 'produce', brie);
+brieIngre = new IngredientBuilder('dried cranberries', 0.333, 'cup', 'produce', brie);
+brieIngre = new IngredientBuilder('chopped pecans', 0.25, 'cup', 'nuts', brie);
+brieIngre = new IngredientBuilder('brown sugar', 1, 'tablespoon', 'baking', brie);
+brieIngre = new IngredientBuilder('ground cinnamon', 0.25, 'teaspoon', 'spices', brie);
+brieIngre = new IngredientBuilder('ground nutmeg', 1, 'dash', 'spices', brie);
+brieIngre = new IngredientBuilder('Brie cheese', 8, 'ounces', 'dairy', brie);
+brieIngre = new IngredientBuilder('crakers', 1, 'assorted', 'other grocery', brie);
 var poppers = new RecipesConstructor('Jalapeno Popper Cups', 4, 'beverages');
-var poppersIngre = IngredientBuilder('mini phyllo tart shells', 12, 'each', 'frozen', poppers);
-poppersIngre = IngredientBuilder('cream cheese', 4, 'ounces', 'dairy', poppers);
-poppersIngre = IngredientBuilder('shredded cheddar cheese', 0.5, 'cup', 'dairy', poppers);
-poppersIngre = IngredientBuilder('jalapeno peppers', 2, 'each', 'produce', poppers);
-poppersIngre = IngredientBuilder('hot pepper sauce', 1, 'tablespoon', 'condiments', poppers);
-poppersIngre = IngredientBuilder('bacon bits', 1, 'dash', 'meat', poppers);
+var poppersIngre = new IngredientBuilder('mini phyllo tart shells', 12, 'each', 'frozen', poppers);
+poppersIngre = new IngredientBuilder('cream cheese', 4, 'ounces', 'dairy', poppers);
+poppersIngre = new IngredientBuilder('shredded cheddar cheese', 0.5, 'cup', 'dairy', poppers);
+poppersIngre = new IngredientBuilder('jalapeno peppers', 2, 'each', 'produce', poppers);
+poppersIngre = new IngredientBuilder('hot pepper sauce', 1, 'tablespoon', 'condiments', poppers);
+poppersIngre = new IngredientBuilder('bacon bits', 1, 'dash', 'meat', poppers);
 
 // var IngredientsConstructor = function (name, qty, measurementunit, location) {
 //   this.name = name;
@@ -127,3 +127,56 @@ poppersIngre = IngredientBuilder('bacon bits', 1, 'dash', 'meat', poppers);
 // poppers.ingredientsArrayCreator('jalapeno peppers', 2, 'each', 'produce', poppers);
 // poppers.ingredientsArrayCreator('hot pepper sauce', 1, 'tablespoon', 'condiments', poppers);
 // poppers.ingredientsArrayCreator('bacon bits', 1, 'dash', 'meat', poppers);
+
+//===============================================================================================================================================================================
+//  Math Function for Recipe and Multiplier
+//===============================================================================================================================================================================
+
+var servingMultipler = ['Regular', 'Double', 'Triple', 'Quadruple'];
+var servingOptions = document.getElementsByClassName('sel');
+var selectOptions = function(){
+  for(var a = 0; a < servingMultipler.length; a++){
+    var options = document.createElement('option');
+    option.textContent = servingMultipler[a];
+  };
+};
+var  = ;
+var  = ;
+
+//===============================================================================================================================================================================
+//  Render Shopping List Table
+//===============================================================================================================================================================================
+var tableHeaders = ['Spices', 'Nuts', 'Dairy', 'Condiments', 'Produce', 'Other-Grocery', 'Baking', 'Meat', 'Frozen', 'Juice & Beverages', 'Wine & Liquor'];
+var tableBodyData1 = localStorage.getItem('');
+var tableBodyData2 = localStorage.getItem('');
+var tableBodyData3 = localStorage.getItem('');
+var shopListTable = document.getElementById('shopping-list');
+
+var renderAsATableHeader = function(){
+  var theadEl = document.getElementById('thead');
+  for(var h = 0; h < tableHeaders.length; h++){
+    var tdEl = document.createElement('td');
+    tdEl.textContent = tableHeaders[h];
+    // if(localStorage.getItem()){
+      theadEl.appendChild(tdEl);
+    // }
+  };
+  var renderAsATableBody = function(){
+    for(var i = 0; i < ; i++) {
+      var tbEl = document.getElementById('tbody');
+      var trEl = document.createElement('tr');
+      var thEl = document.createElement('th');
+      thEl.textContent = ;
+      trEl.appendChild(thEl);
+      thEl = document.createElement('td');
+      thEl.textContent = ;
+      trEl.appendChild(thEl);
+      tbEl.appendChild(trEl);
+      shopListTable.appendChild(tbEl);
+    };
+  };
+  shopListTable.appendChild(theadEl);
+  renderAsATableBody();
+};
+
+renderAsATableHeader();

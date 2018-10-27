@@ -61,6 +61,28 @@ main3.ingredientsArrayCreator('FLOUR', .25, 'CUPS', 'BAKING');
 main3.ingredientsArrayCreator('CHICKEN STOCK', 3, 'CUPS', 'OTHER-GROCERY');
 
 
+var main1ButtonClickHandler = function(event){
+  event.preventDefault();
+  // console.log(event);
+  if (localStorage.getItem('main-dish-1')) {
+    localStorage.removeItem('main-dish-1');
+    mainButton1.setAttribute('class', '');
+    console.log(mainButton1);
+  } else if(event.target.id === 'main-dish-1'){
+    var saveRecipe = JSON.stringify(main1);
+    // console.log(saveRecipe);
+    mainButton1.setAttribute('class', 'selected');
+    console.log(mainButton1);
+    localStorage.setItem('main-dish-1', saveRecipe);
+  }
+
+};
+
+var mainButton1 = document.getElementById('main-dish-1');
+mainButton1.addEventListener('submit', main1ButtonClickHandler);
+// main1ButtonClickHandler();
+
+
 //QUESTIONS AND COMMENTS
 //ALL RECIPE COMPONENTS IN CAPS OR CAN WE GET BACK TO SENTENCE CASE AFTER PULLING FROM LOCAL STORAGE IN ORDER TO RENDER NICELY TO THE TABLES?
 //FUNCTION TO PLURALIZE STRINGS WITH MORE THAN 1 EACH? EXAMPLE LEMON VS LEMONS
