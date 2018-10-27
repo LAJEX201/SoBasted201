@@ -16,4 +16,7 @@ REMINDER: only Julie is updating README, slack me your time you work on this pro
   -erin and xochil worked on the github projects section to create the issues and assign to teammates
   -lorin started css for index.html
   
-
+10-26-18
+  -Erin, 5 hours, played with index.html css, updated css links on other html pages, built main dish recipe objects in erin.js, added favicons to page tabs, cropped the hero image, and fixed spelling errors 
+  -julie 1 hr worked on object creations
+  -anthony, _time_ object creations
