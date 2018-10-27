@@ -23,7 +23,7 @@
                     <li><a href="about.html">ABOUT US</a></li>                    
                 </ul>
             <hr>
-            <h2>SELECT ONE OR MORE RECIPES FROM EACH OF THE FOLLOWING CATEGORIES</h2>
+            <h2>ADD TO MENU ONE OR MORE RECIPES FROM EACH OF THE FOLLOWING CATEGORIES</h2>
             <hr>
         </nav>
     </header>
@@ -47,7 +47,7 @@
                         
                     </select>
                 </form>
-                <input type="submit" value="SELECT">
+                <input type="submit" value="ADD TO MENU" id="appetizer-1">
             </li>
             <li>
                 <h4>APPLE-PECAN BAKED BRIE</h4>
@@ -58,7 +58,7 @@
                         
                     </select>
                 </form>
-                <input type="submit" value="SELECT">
+                <input type="submit" value="ADD TO MENU" id="appetizer-2">
             </li>
             <li>
                 <h4>JALAPENO POPPER CUPS</h4>
@@ -69,7 +69,7 @@
                         
                     </select>
                 </form>
-                <input type="submit" value="SELECT">
+                <input type="submit" value="ADD TO MENU" id="appetizer-3">
             </li>
         </ul>
     </div>
@@ -85,12 +85,15 @@
                 <h4>CIDER-BRINED TURKEY</h4>
                 <img src="images/recipes/main1-cider-brined-turkey-with-star-anise-300px.jpg" alt="CIDER-BRINED TURKEY">
                 <h5><a href="https://www.bonappetit.com/recipe/cider-brined-turkey-with-star-anise-and-cinnamon">RECIPE LINK</a></h5>
-                <form action="">
-                    <select name="servings" id="main1" class="sel">
-                        
-                    </select>
+                <form action="" id="main-dish-1">
+                    <fieldset>
+                        <select name="servings" id="main1" class="sel">
+                            
+                        </select>
+                        <input type="submit" value="ADD TO MENU" />
+                    </fieldset>
                 </form>
-                <input type="submit" value="SELECT">
+                <!-- <button type="submit" value="ADD TO MENU" id="main-dish-1">ADD TO MENU</button> -->
             </li>
             <li>
                 <h4>BOURBON ORANGE GLAZED HAM</h4>
@@ -101,7 +104,7 @@
                         
                     </select>
                 </form>
-                <input type="submit" value="SELECT">
+                <input type="submit" value="ADD TO MENU" id="main-dish-2">
             </li>
             <li>
                 <h4>MAPLE-GLAZED TURKEY WITH BACON</h4>
@@ -112,7 +115,7 @@
                         
                     </select>
                 </form>
-                <input type="submit" value="SELECT">
+                <input type="submit" value="ADD TO MENU" id="main-dish-3">
             </li>
         </ul>
     </div>
@@ -133,7 +136,7 @@
                         
                     </select>
                 </form>
-                <input type="submit" value="SELECT">
+                <input type="submit" value="ADD TO MENU" id="side-dish-1">
             </li>
             <li>
                 <h4>MASHED POTATOES <!--WITH CARAMELIZED SHALLOTS--></h4>
@@ -144,7 +147,7 @@
                         
                     </select>
                 </form>
-                <input type="submit" value="SELECT">
+                <input type="submit" value="ADD TO MENU" id="side-dish-2">
             </li>
             <li>
                 <h4>ROASTED BRUSSEL SPROUTS <!--WITH BALSALMIC ONIONS &amp BACON--></h4>
@@ -156,7 +159,7 @@
                     </select>
                 </form>
                 
-                <input type="submit" value="SELECT">
+                <input type="submit" value="ADD TO MENU" id="side-dish-3">
             </li>
         </ul>
     </div>
@@ -177,7 +180,7 @@
                         
                     </select>
                 </form>
-                <input type="submit" value="SELECT">
+                <input type="submit" value="ADD TO MENU" id="dessert-1">
             </li>
             <li>
                 <h4>CRANBERRY-ALMOND <!--SHORTBREAD--> TART</h4>
@@ -188,7 +191,7 @@
                         
                     </select>
                 </form>
-                <input type="submit" value="SELECT">
+                <input type="submit" value="ADD TO MENU" id="dessert-2">
             </li>
             <li>
                 <h4>CARAMEL APPLE PIE</h4>
@@ -199,7 +202,7 @@
                         
                     </select>
                 </form>
-                <input type="submit" value="SELECT">
+                <input type="submit" value="ADD TO MENU" id="dessert-3">
             </li>
         </ul>
     </div>
@@ -220,7 +223,7 @@
                         
                     </select>
                 </form>
-                <input type="submit" value="SELECT">
+                <input type="submit" value="ADD TO MENU" id="beverage-1">
             </li>
             <li>
                 <h4>APPLE CIDER AUTUMN SANGRIA</h4>
@@ -231,7 +234,7 @@
                         
                     </select>
                 </form>
-                <input type="submit" value="SELECT">
+                <input type="submit" value="ADD TO MENU" id="beverage-2">
             </li>
             <li>
                 <h4>LUSCIOUS SLUSH PUNCH</h4>
@@ -242,7 +245,7 @@
                         
                     </select>
                 </form>
-                <input type="submit" value="SELECT">
+                <input type="submit" value="ADD TO MENU" id="beverage-3">
             </li>
         </ul>
     </div>
@@ -260,6 +263,6 @@
         <p>Codefellows 201 - November 2018</p>
     </footer>
 
-    <script src="main.js"></script>
+    <script src="erin.js"></script>
 </body>
 </html>
