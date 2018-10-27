@@ -54,9 +54,9 @@ var MenuItem = function(name, course, servings) {
   this.servings = servings;
 };
 
-Menu.prototype.saveToLocalStorage = function() {
-  localStorage.setItem('menu', JSON.stringify(this.recipe));
-};
+// Menu.prototype.saveToLocalStorage = function() {
+//   localStorage.setItem('menu', JSON.stringify(this.recipe));
+// };
 
 // RecipesConstructor.prototype.ingredientsArrayCreator = function (name, qty, measurementunit, location) {
 //   var ingredOne = new IngredientsConstructor (name, qty, measurementunit, location);
@@ -233,6 +233,7 @@ var showMenuTable = function() {
 };
 
 //i tem put in menu so i could test (i wrote menu as the thing to add it to local storage)
+//so each recipe is 
 var loadMenuTable = function() {
   var menuItems = JSON.parse(localStorage.getItem('menu')) || [];
   menu = new Menu(menuItems);
