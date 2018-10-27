@@ -70,14 +70,14 @@ var siteRecipes = function(){
   mainRecipeCiderTurkey.ingredientsArrayCreator('APPLES', 2, 'EACH', 'PRODUCE');
   mainRecipeCiderTurkey.ingredientsArrayCreator('BUTTER', .5, 'CUP', 'DAIRY');
 
-  var mainrecipeHam = new RecipesConstructor ('BOURBON ORANGE GLAZED HAM', 10, 'MAIN DISH');
-  mainrecipeHam.ingredientsArrayCreator('ORANGE MARMALADE', .75, 'CUPS', 'CONDIMENTS');
-  mainrecipeHam.ingredientsArrayCreator('MAPLE SYRUP', .25, 'CUPS', 'CONDIMENTS');
-  mainrecipeHam.ingredientsArrayCreator('WHOLE-GRAIN DIJON MUSTARD', .25, 'CUPS', 'CONDIMENTS');
-  mainrecipeHam.ingredientsArrayCreator('BOURBON', .25, 'CUPS', 'WINE & LIQUOR');
-  mainrecipeHam.ingredientsArrayCreator('LEMON JUICE', 2, 'TBS', 'PRODUCE');
-  mainrecipeHam.ingredientsArrayCreator('GROUND GINGER', .5, 'TSP', 'SPICES');
-  mainrecipeHam.ingredientsArrayCreator('BONE-IN HALF HAM', 10, 'LBS', 'MEAT');
+  var mainRecipeHam = new RecipesConstructor ('BOURBON ORANGE GLAZED HAM', 10, 'MAIN DISH');
+  mainRecipeHam.ingredientsArrayCreator('ORANGE MARMALADE', .75, 'CUPS', 'CONDIMENTS');
+  mainRecipeHam.ingredientsArrayCreator('MAPLE SYRUP', .25, 'CUPS', 'CONDIMENTS');
+  mainRecipeHam.ingredientsArrayCreator('WHOLE-GRAIN DIJON MUSTARD', .25, 'CUPS', 'CONDIMENTS');
+  mainRecipeHam.ingredientsArrayCreator('BOURBON', .25, 'CUPS', 'WINE & LIQUOR');
+  mainRecipeHam.ingredientsArrayCreator('LEMON JUICE', 2, 'TBS', 'PRODUCE');
+  mainRecipeHam.ingredientsArrayCreator('GROUND GINGER', .5, 'TSP', 'SPICES');
+  mainRecipeHam.ingredientsArrayCreator('BONE-IN HALF HAM', 10, 'LBS', 'MEAT');
 
   var mainRecipeMapleTurkey = new RecipesConstructor ('MAPLE-GLAZED TURKEY WITH BACON AND SAGE BUTTER', 12, 'MAIN DISH');
   mainRecipeMapleTurkey.ingredientsArrayCreator('TURKEY', 12, 'LBS', 'MEAT');
