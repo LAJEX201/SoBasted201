@@ -60,6 +60,7 @@ main3.ingredientsArrayCreator('BACON', 8, 'STRIPS', 'MEAT');
 main3.ingredientsArrayCreator('FLOUR', .25, 'CUPS', 'BAKING');
 main3.ingredientsArrayCreator('CHICKEN STOCK', 3, 'CUPS', 'OTHER-GROCERY');
 
+/////////////////////////////////MAIN 1/////////////////////////////////////
 
 var main1ButtonClickHandler = function(event){
   event.preventDefault();
@@ -69,19 +70,121 @@ var main1ButtonClickHandler = function(event){
     mainButton1.setAttribute('class', '');
     console.log(mainButton1);
   } else if(event.target.id === 'main-dish-1'){
-    var saveRecipe = JSON.stringify(main1);
+    var saveRecipe = JSON.stringify(mainRecipeCiderTurkey);
     // console.log(saveRecipe);
     mainButton1.setAttribute('class', 'selected');
     console.log(mainButton1);
     localStorage.setItem('main-dish-1', saveRecipe);
   }
-
 };
 
 var mainButton1 = document.getElementById('main-dish-1');
 mainButton1.addEventListener('submit', main1ButtonClickHandler);
-// main1ButtonClickHandler();
 
+/////////////////////////////////MAIN 2/////////////////////////////////////
+
+var main2ButtonClickHandler = function(event){
+  event.preventDefault();
+  // console.log(event);
+  if (localStorage.getItem('main-dish-2')) {
+    localStorage.removeItem('main-dish-2');
+    mainButton2.setAttribute('class', '');
+    console.log(mainButton2);
+  } else if(event.target.id === 'main-dish-2'){
+    var saveRecipe = JSON.stringify(mainRecipeHam);
+    // console.log(saveRecipe);
+    mainButton2.setAttribute('class', 'selected');
+    console.log(mainButton2);
+    localStorage.setItem('main-dish-2', saveRecipe);
+  }
+};
+
+var mainButton2 = document.getElementById('main-dish-2');
+mainButton2.addEventListener('submit', main2ButtonClickHandler);
+
+/////////////////////////////////MAIN 3/////////////////////////////////////
+
+var main3ButtonClickHandler = function(event){
+  event.preventDefault();
+  // console.log(event);
+  if (localStorage.getItem('main-dish-3')) {
+    localStorage.removeItem('main-dish-3');
+    mainButton3.setAttribute('class', '');
+    console.log(mainButton3);
+  } else if(event.target.id === 'main-dish-3'){
+    var saveRecipe = JSON.stringify(mainRecipeHam);
+    // console.log(saveRecipe);
+    mainButton3.setAttribute('class', 'selected');
+    console.log(mainButton3);
+    localStorage.setItem('main-dish-3', saveRecipe);
+  }
+};
+
+var mainButton3 = document.getElementById('main-dish-3');
+mainButton3.addEventListener('submit', main3ButtonClickHandler);
+
+//////////////////////////////DESSERT 1/////////////////////////////////////
+
+var dessert1ButtonClickHandler = function(event){
+  event.preventDefault();
+  // console.log(event);
+  if (localStorage.getItem('dessert-1')) {
+    localStorage.removeItem('dessert-1');
+    dessertButton1.setAttribute('class', '');
+    console.log(dessertButton1);
+  } else if(event.target.id === 'dessert-1'){
+    var saveRecipe = JSON.stringify(dessertRecipePumkinPie);
+    // console.log(saveRecipe);
+    dessertButton1.setAttribute('class', 'selected');
+    console.log(dessertButton1);
+    localStorage.setItem('dessert-1', saveRecipe);
+  }
+};
+
+var dessertButton1 = document.getElementById('dessert-1');
+dessertButton1.addEventListener('submit', dessert1ButtonClickHandler);
+
+//////////////////////////////DESSERT 2/////////////////////////////////////
+
+var dessert2ButtonClickHandler = function(event){
+  event.preventDefault();
+  // console.log(event);
+  if (localStorage.getItem('dessert-2')) {
+    localStorage.removeItem('dessert-2');
+    dessertButton2.setAttribute('class', '');
+    console.log(dessertButton2);
+  } else if(event.target.id === 'dessert-2'){
+    var saveRecipe = JSON.stringify(dessertRecipeTart);
+    // console.log(saveRecipe);
+    dessertButton2.setAttribute('class', 'selected');
+    console.log(dessertButton2);
+    localStorage.setItem('dessert-2', saveRecipe);
+  }
+};
+
+var dessertButton2 = document.getElementById('dessert-2');
+dessertButton2.addEventListener('submit', dessert2ButtonClickHandler);
+
+//////////////////////////////DESSERT 3/////////////////////////////////////
+
+var dessert3ButtonClickHandler = function(event){
+  event.preventDefault();
+  // console.log(event);
+  if (localStorage.getItem('dessert-3')) {
+    localStorage.removeItem('dessert-3');
+    dessertButton3.setAttribute('class', '');
+    console.log(dessertButton3);
+  } else if(event.target.id === 'dessert-3'){
+    var saveRecipe = JSON.stringify(dessertRecipeArkansas);
+    // console.log(saveRecipe);
+    dessertButton3.setAttribute('class', 'selected');
+    console.log(dessertButton3);
+    localStorage.setItem('dessert-3', saveRecipe);
+  }
+};
+
+var dessertButton3 = document.getElementById('dessert-3');
+dessertButton3.addEventListener('submit', dessert3ButtonClickHandler);
 
 //QUESTIONS AND COMMENTS
 //ALL RECIPE COMPONENTS IN CAPS OR CAN WE GET BACK TO SENTENCE CASE AFTER PULLING FROM LOCAL STORAGE IN ORDER TO RENDER NICELY TO THE TABLES?
