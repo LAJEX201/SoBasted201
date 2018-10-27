@@ -175,23 +175,23 @@ sideRecipeCreamedCorn.ingredientsArrayCreator ('Flour', 3, 'tbsp', 'Baking');
 sideRecipeCreamedCorn.ingredientsArrayCreator ('Milk', 2, 'cup', 'Dairy');
 sideRecipeCreamedCorn.ingredientsArrayCreator ('Sugar', 2, 'tbsp', 'Spices');
 //========================================================================================================================================================================
-var dessertRecipePumkinPie = new RecipesConstructor ('The Great Pumpkin Pie Recipe', 8, 'dessert');
-dessertRecipePumkinPie.ingredientsArrayCreator ('fresh cranberries', 1,'cup', 'produce');
-dessertRecipePumkinPie.ingredientsArrayCreator ('granulated sugar', 2,'cup', 'baking');
-dessertRecipePumkinPie.ingredientsArrayCreator ('pre-made pie crust', 1, 'package', 'other-grocery');
-dessertRecipePumkinPie.ingredientsArrayCreator ('pumkin puree', 1, 'can', 'other-grocery');
-dessertRecipePumkinPie.ingredientsArrayCreator ('eggs', 3, 'each', 'dairy');
-dessertRecipePumkinPie.ingredientsArrayCreator ('packed light brown sugar', 1.25, 'cup', 'baking');
-dessertRecipePumkinPie.ingredientsArrayCreator ('cornstarch', 1, 'tablespoon', 'baking');
-dessertRecipePumkinPie.ingredientsArrayCreator ('salt', .5, 'teaspoon', 'spices');
-dessertRecipePumkinPie.ingredientsArrayCreator ('ground cinnamon', 1.5, 'teaspoon', 'spices');
-dessertRecipePumkinPie.ingredientsArrayCreator ('ground ginger', .5, 'teaspoon', 'spices');
-dessertRecipePumkinPie.ingredientsArrayCreator ('grated nutmeg', .25, 'teaspoon', 'spices');
-dessertRecipePumkinPie.ingredientsArrayCreator ('ground pepper', .125, 'teaspoon', 'spices');
-dessertRecipePumkinPie.ingredientsArrayCreator ('heavy cream', 1, 'cup', 'dairy');
-dessertRecipePumkinPie.ingredientsArrayCreator ('milk', .25, 'cup', 'dairy');
-dessertRecipePumkinPie.ingredientsArrayCreator ('egg', 1, 'each', 'dairy');
-dessertRecipePumkinPie.ingredientsArrayCreator ('milk', 1, 'tablespoon', 'dairy');
+var dessertRecipePumpkinPie = new RecipesConstructor ('The Great Pumpkin Pie Recipe', 8, 'dessert');
+dessertRecipePumpkinPie.ingredientsArrayCreator ('fresh cranberries', 1,'cup', 'produce');
+dessertRecipePumpkinPie.ingredientsArrayCreator ('granulated sugar', 2,'cup', 'baking');
+dessertRecipePumpkinPie.ingredientsArrayCreator ('pre-made pie crust', 1, 'package', 'other-grocery');
+dessertRecipePumpkinPie.ingredientsArrayCreator ('pumpkin puree', 1, 'can', 'other-grocery');
+dessertRecipePumpkinPie.ingredientsArrayCreator ('eggs', 3, 'each', 'dairy');
+dessertRecipePumpkinPie.ingredientsArrayCreator ('packed light brown sugar', 1.25, 'cup', 'baking');
+dessertRecipePumpkinPie.ingredientsArrayCreator ('cornstarch', 1, 'tablespoon', 'baking');
+dessertRecipePumpkinPie.ingredientsArrayCreator ('salt', .5, 'teaspoon', 'spices');
+dessertRecipePumpkinPie.ingredientsArrayCreator ('ground cinnamon', 1.5, 'teaspoon', 'spices');
+dessertRecipePumpkinPie.ingredientsArrayCreator ('ground ginger', .5, 'teaspoon', 'spices');
+dessertRecipePumpkinPie.ingredientsArrayCreator ('grated nutmeg', .25, 'teaspoon', 'spices');
+dessertRecipePumpkinPie.ingredientsArrayCreator ('ground pepper', .125, 'teaspoon', 'spices');
+dessertRecipePumpkinPie.ingredientsArrayCreator ('heavy cream', 1, 'cup', 'dairy');
+dessertRecipePumpkinPie.ingredientsArrayCreator ('milk', .25, 'cup', 'dairy');
+dessertRecipePumpkinPie.ingredientsArrayCreator ('egg', 1, 'each', 'dairy');
+dessertRecipePumpkinPie.ingredientsArrayCreator ('milk', 1, 'tablespoon', 'dairy');
 
 var dessertRecipeTart = new RecipesConstructor ('Cranberry-Almond Shortbread Tart', 8, 'dessert');
 dessertRecipeTart.ingredientsArrayCreator ('granulated sugar', 1, 'cup', 'baking');
@@ -424,53 +424,53 @@ var side3ButtonClickHandler = function(event){
 var sideButton3 = document.getElementById('side-dish-3');
 sideButton3.addEventListener('submit', side3ButtonClickHandler);
 
-/////////////////////////////////SIDE 4/////////////////////////////////////
+// /////////////////////////////////SIDE 4/////////////////////////////////////
 
-var side4ButtonClickHandler = function(event){
-  event.preventDefault();
-  if (localStorage.getItem('side-dish-4')) {
-    localStorage.removeItem('side-dish-4');
-    sideButton4.setAttribute('class', '');
-  } else if(event.target.id === 'side-dish-4'){
-    var saveRecipe = JSON.stringify(sideRecipeGreenBean);
-    sideButton4.setAttribute('class', 'selected');
-    localStorage.setItem('side-dish-4', saveRecipe);
-  }
-};
-var sideButton4 = document.getElementById('side-dish-4');
-sideButton4.addEventListener('submit', side4ButtonClickHandler);
+// var side4ButtonClickHandler = function(event){
+//   event.preventDefault();
+//   if (localStorage.getItem('side-dish-4')) {
+//     localStorage.removeItem('side-dish-4');
+//     sideButton4.setAttribute('class', '');
+//   } else if(event.target.id === 'side-dish-4'){
+//     var saveRecipe = JSON.stringify(sideRecipeGreenBean);
+//     sideButton4.setAttribute('class', 'selected');
+//     localStorage.setItem('side-dish-4', saveRecipe);
+//   }
+// };
+// var sideButton4 = document.getElementById('side-dish-4');
+// sideButton4.addEventListener('submit', side4ButtonClickHandler);
 
-/////////////////////////////////SIDE 5/////////////////////////////////////
+// /////////////////////////////////SIDE 5/////////////////////////////////////
 
-var side5ButtonClickHandler = function(event){
-  event.preventDefault();
-  if (localStorage.getItem('side-dish-5')) {
-    localStorage.removeItem('side-dish-5');
-    sideButton5.setAttribute('class', '');
-  } else if(event.target.id === 'side-dish-5'){
-    var saveRecipe = JSON.stringify(sideRecipeCranberrySauce);
-    sideButton5.setAttribute('class', 'selected');
-    localStorage.setItem('side-dish-5', saveRecipe);
-  }
-};
-var sideButton5 = document.getElementById('side-dish-5');
-sideButton5.addEventListener('submit', side5ButtonClickHandler);
+// var side5ButtonClickHandler = function(event){
+//   event.preventDefault();
+//   if (localStorage.getItem('side-dish-5')) {
+//     localStorage.removeItem('side-dish-5');
+//     sideButton5.setAttribute('class', '');
+//   } else if(event.target.id === 'side-dish-5'){
+//     var saveRecipe = JSON.stringify(sideRecipeCranberrySauce);
+//     sideButton5.setAttribute('class', 'selected');
+//     localStorage.setItem('side-dish-5', saveRecipe);
+//   }
+// };
+// var sideButton5 = document.getElementById('side-dish-5');
+// sideButton5.addEventListener('submit', side5ButtonClickHandler);
 
-/////////////////////////////////SIDE 6/////////////////////////////////////
+// /////////////////////////////////SIDE 6/////////////////////////////////////
 
-var side6ButtonClickHandler = function(event){
-  event.preventDefault();
-  if (localStorage.getItem('side-dish-6')) {
-    localStorage.removeItem('side-dish-6');
-    sideButton6.setAttribute('class', '');
-  } else if(event.target.id === 'side-dish-6'){
-    var saveRecipe = JSON.stringify(sideRecipeCreamedCorn);
-    sideButton6.setAttribute('class', 'selected');
-    localStorage.setItem('side-dish-6', saveRecipe);
-  }
-};
-var sideButton6 = document.getElementById('side-dish-6');
-sideButton6.addEventListener('submit', side6ButtonClickHandler);
+// var side6ButtonClickHandler = function(event){
+//   event.preventDefault();
+//   if (localStorage.getItem('side-dish-6')) {
+//     localStorage.removeItem('side-dish-6');
+//     sideButton6.setAttribute('class', '');
+//   } else if(event.target.id === 'side-dish-6'){
+//     var saveRecipe = JSON.stringify(sideRecipeCreamedCorn);
+//     sideButton6.setAttribute('class', 'selected');
+//     localStorage.setItem('side-dish-6', saveRecipe);
+//   }
+// };
+// var sideButton6 = document.getElementById('side-dish-6');
+// sideButton6.addEventListener('submit', side6ButtonClickHandler);
 
 //////////////////////////////DESSERT 1/////////////////////////////////////
 
@@ -480,7 +480,7 @@ var dessert1ButtonClickHandler = function(event){
     localStorage.removeItem('dessert-1');
     dessertButton1.setAttribute('class', '');
   } else if(event.target.id === 'dessert-1'){
-    var saveRecipe = JSON.stringify(dessertRecipePumkinPie);
+    var saveRecipe = JSON.stringify(dessertRecipePumpkinPie);
     dessertButton1.setAttribute('class', 'selected');
     localStorage.setItem('dessert-1', saveRecipe);
   }
