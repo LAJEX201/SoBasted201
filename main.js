@@ -1,6 +1,8 @@
 'use strict';
 
 var allRecipes = [];
+var servingOptions = document.getElementsByClassName('sel');
+var servingMultipler = ['Regular', 'Double', 'Triple', 'Quadruple'];
 
 var RecipesConstructor = function(name, servings, course){
   this.name = name.toUpperCase();
@@ -22,7 +24,22 @@ RecipesConstructor.prototype.ingredientsArrayCreator = function (name, qty, meas
   this.ingredients.push(ingredOne);
 };
 
-var siteRecipes = function(){
+var selectOptions = function(){
+  for(var a = 0; a < servingOptions.length; a++){
+    for(var b = 0; b < servingMultipler.length; b++){
+      var option = document.createElement('option');
+      option.text = servingMultipler[b];
+      servingOptions[a].add(option);
+    };
+  };
+};
+selectOptions();
+
+
+//===============================================================================================================================================================================
+//    Recipe Construction
+//===============================================================================================================================================================================
+
   var appRecipePecan = new RecipesConstructor('SPICED PECANS', 16, 'APPITIZER');
   appRecipePecan.ingredientsArrayCreator('salt', 4, 'teaspoon', 'spices');
   appRecipePecan.ingredientsArrayCreator('cayeene', 0.5, 'teaspoon', 'spices');
@@ -230,6 +247,3 @@ var siteRecipes = function(){
   punch.ingredientsArrayCreator('lemon-lime flavored carbonated beverage', 2, '2-liter bottles', 'juice');
   punch.ingredientsArrayCreator('strawberry flavored mix', 6, 'ounces', 'baking');
   punch.ingredientsArrayCreator('canned pineapple juice', 46, 'fluid ounces', 'juice');
-};
-
-siteRecipes();
