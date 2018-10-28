@@ -36,11 +36,6 @@ Menu.prototype.addItem = function(name, course, servings) {
 };
 
 Menu.prototype.removeItem = function(prod) {
-  // TODO: Fill in this instance method to remove one item from the cart.
-  // Note: You will have to decide what kind of parameter to pass in here!
-  //we choose the parameter name of the product
-  // var removeIndexNumber = 0;
-
   for (var i = 0; i < this.recipe.length; i++) {
     if (this.recipe[i].name === prod) {
       this.recipe.splice(i,1);
@@ -54,9 +49,18 @@ var MenuItem = function(name, course, servings) {
   this.servings = servings;
 };
 
-// Menu.prototype.saveToLocalStorage = function() {
-//   localStorage.setItem('menu', JSON.stringify(this.recipe));
-// };
+//removed because erin got her save to storage a different way
+Menu.prototype.saveToLocalStorage = function() {
+  localStorage.setItem('menu', JSON.stringify(this.recipe));
+};
+
+// var saveToLocalStorage = function() {
+//   var saveRecipe = JSON.stringify(side1);
+//     sideButton1.setAttribute('class', 'selected');
+//     localStorage.setItem('side-dish-1', saveRecipe);
+
+// }
+
 
 // RecipesConstructor.prototype.ingredientsArrayCreator = function (name, qty, measurementunit, location) {
 //   var ingredOne = new IngredientsConstructor (name, qty, measurementunit, location);
@@ -214,6 +218,7 @@ var showMenuTable = function() {
     tdLinkEl.textContent = ('X');
     tdLinkEl.classList.add('removelistitem');
     tdLinkEl.id= menu.recipe[i].name;
+    console.log('tdLinkEl ' + tdLinkEl);
 
     var tdRecipeEl = document.createElement('td');
     tdRecipeEl.textContent = menu.recipe[i].name;
@@ -257,6 +262,7 @@ var renderMenuTable = function() {
   showMenuTable();
 };
 
+//might need to change the remove based on how it was entered into local storage
 function removeItemFromMenu(event) {
   if(event.target.classList.contains('removelistitem')) {
     menu.removeItem(event.target.id);
@@ -271,9 +277,52 @@ menuclick.addEventListener('click', removeItemFromMenu);
 
 
 var menu = new Menu([]);
-menu.addItem(recipeCreamCorn.name,recipeCreamCorn.course,recipeCreamCorn.servings);
-menu.addItem(recipeUltGreenBeanCass.name,recipeUltGreenBeanCass.course,recipeUltGreenBeanCass.servings);
+
+var allRecipeHTMLIds = ['main-dish-1','main-dish-2','main-dish-3','appetizer-1','appetizer-2','appetizer-3','side-dish-1','side-dish-2','side-dish-3','dessert-1','dessert-2','dessert-3','beverage-1','beverage-2','beverage-3'];
+//console.log(JSON.parse(localStorage.getItem('main-dish-1')) != null);
+for (var p= 0; p < allRecipeHTMLIds.length; p++) {
+  //console.log('in for loop');
+  if(JSON.parse(localStorage.getItem(allRecipeHTMLIds[p])) !== null) {
+    menu.addItem(allRecipeHTMLIds[p].name,allRecipeHTMLIds[p].course, allRecipeHTMLIds[p].servings);
+  } 
+  // else if (localStorage.getItem(allRecipeHTMLIds[p]) === 'main-dish-2') {
+  //   menu.addItem(allRecipeHTMLIds[p].name,allRecipeHTMLIds[p].course, allRecipeHTMLIds[p].servings);
+  // } else if (localStorage.getItem(allRecipeHTMLIds[p]) === 'main-dish-3') {
+  //   menu.addItem(allRecipeHTMLIds[p].name,allRecipeHTMLIds[p].course, allRecipeHTMLIds[p].servings);
+  // } else if (localStorage.getItem(allRecipeHTMLIds[p]) === 'appetizer-1') {
+  //   menu.addItem(allRecipeHTMLIds[p].name,allRecipeHTMLIds[p].course, allRecipeHTMLIds[p].servings);
+  // } else if (localStorage.getItem(allRecipeHTMLIds[p]) === 'appetizer-2') {
+  //   menu.addItem(allRecipeHTMLIds[p].name,allRecipeHTMLIds[p].course, allRecipeHTMLIds[p].servings);
+  // } else if (localStorage.getItem(allRecipeHTMLIds[p]) === 'appetizer-3') {
+  //   menu.addItem(allRecipeHTMLIds[p].name,allRecipeHTMLIds[p].course, allRecipeHTMLIds[p].servings);
+  // } else if (localStorage.getItem(allRecipeHTMLIds[p]) === 'side-dish-1') {
+  //   menu.addItem(allRecipeHTMLIds[p].name,allRecipeHTMLIds[p].course, allRecipeHTMLIds[p].servings);
+  // } else if (localStorage.getItem(allRecipeHTMLIds[p]) === 'side-dish-2') {
+  //   menu.addItem(allRecipeHTMLIds[p].name,allRecipeHTMLIds[p].course, allRecipeHTMLIds[p].servings);
+  // } else if (localStorage.getItem(allRecipeHTMLIds[p]) === 'side-dish-3') {
+  //   menu.addItem(allRecipeHTMLIds[p].name,allRecipeHTMLIds[p].course, allRecipeHTMLIds[p].servings);
+  // } else if (localStorage.getItem(allRecipeHTMLIds[p]) === 'dessert-1') {
+  //   menu.addItem(allRecipeHTMLIds[p].name,allRecipeHTMLIds[p].course, allRecipeHTMLIds[p].servings);
+  // } else if (localStorage.getItem(allRecipeHTMLIds[p]) === 'dessert-2' ) {
+  //   menu.addItem(allRecipeHTMLIds[p].name,allRecipeHTMLIds[p].course, allRecipeHTMLIds[p].servings);
+  // } else if (localStorage.getItem(allRecipeHTMLIds[p]) === 'dessert-3') {
+  //   menu.addItem(allRecipeHTMLIds[p].name,allRecipeHTMLIds[p].course, allRecipeHTMLIds[p].servings);
+  // } else if (localStorage.getItem(allRecipeHTMLIds[p]) === 'beverage-1') {
+  //   menu.addItem(allRecipeHTMLIds[p].name,allRecipeHTMLIds[p].course, allRecipeHTMLIds[p].servings);
+  // } else if (localStorage.getItem(allRecipeHTMLIds[p]) === 'beverage-2') {
+  //   menu.addItem(allRecipeHTMLIds[p].name,allRecipeHTMLIds[p].course, allRecipeHTMLIds[p].servings);
+  // } else if (localStorage.getItem(allRecipeHTMLIds[p]) === 'beverage-3') {
+  //   menu.addItem(allRecipeHTMLIds[p].name,allRecipeHTMLIds[p].course, allRecipeHTMLIds[p].servings);
+  // }
+  //console.log(menu);
+}
+
+
+// menu.addItem(recipeCreamCorn.name,recipeCreamCorn.course,recipeCreamCorn.servings);
+// menu.addItem(recipeUltGreenBeanCass.name,recipeUltGreenBeanCass.course,recipeUltGreenBeanCass.servings);
+
 menu.saveToLocalStorage();
+
 renderMenuTable();
 
 // ======================
