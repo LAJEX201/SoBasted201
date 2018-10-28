@@ -279,42 +279,21 @@ menuclick.addEventListener('click', removeItemFromMenu);
 var menu = new Menu([]);
 
 var allRecipeHTMLIds = ['main-dish-1','main-dish-2','main-dish-3','appetizer-1','appetizer-2','appetizer-3','side-dish-1','side-dish-2','side-dish-3','dessert-1','dessert-2','dessert-3','beverage-1','beverage-2','beverage-3'];
-//console.log(JSON.parse(localStorage.getItem('main-dish-1')) != null);
+console.log(JSON.parse(localStorage.getItem(allRecipeHTMLIds[0])) !== null);
+console.log(JSON.parse(localStorage.getItem(allRecipeHTMLIds[0])));
+
+var temp;
+//var temp= JSON.parse(localStorage.getItem(allRecipeHTMLIds[0]));
+//console.log(temp);
+//console.log(temp.name);
 for (var p= 0; p < allRecipeHTMLIds.length; p++) {
   //console.log('in for loop');
-  if(JSON.parse(localStorage.getItem(allRecipeHTMLIds[p])) !== null) {
-    menu.addItem(allRecipeHTMLIds[p].name,allRecipeHTMLIds[p].course, allRecipeHTMLIds[p].servings);
-  } 
-  // else if (localStorage.getItem(allRecipeHTMLIds[p]) === 'main-dish-2') {
-  //   menu.addItem(allRecipeHTMLIds[p].name,allRecipeHTMLIds[p].course, allRecipeHTMLIds[p].servings);
-  // } else if (localStorage.getItem(allRecipeHTMLIds[p]) === 'main-dish-3') {
-  //   menu.addItem(allRecipeHTMLIds[p].name,allRecipeHTMLIds[p].course, allRecipeHTMLIds[p].servings);
-  // } else if (localStorage.getItem(allRecipeHTMLIds[p]) === 'appetizer-1') {
-  //   menu.addItem(allRecipeHTMLIds[p].name,allRecipeHTMLIds[p].course, allRecipeHTMLIds[p].servings);
-  // } else if (localStorage.getItem(allRecipeHTMLIds[p]) === 'appetizer-2') {
-  //   menu.addItem(allRecipeHTMLIds[p].name,allRecipeHTMLIds[p].course, allRecipeHTMLIds[p].servings);
-  // } else if (localStorage.getItem(allRecipeHTMLIds[p]) === 'appetizer-3') {
-  //   menu.addItem(allRecipeHTMLIds[p].name,allRecipeHTMLIds[p].course, allRecipeHTMLIds[p].servings);
-  // } else if (localStorage.getItem(allRecipeHTMLIds[p]) === 'side-dish-1') {
-  //   menu.addItem(allRecipeHTMLIds[p].name,allRecipeHTMLIds[p].course, allRecipeHTMLIds[p].servings);
-  // } else if (localStorage.getItem(allRecipeHTMLIds[p]) === 'side-dish-2') {
-  //   menu.addItem(allRecipeHTMLIds[p].name,allRecipeHTMLIds[p].course, allRecipeHTMLIds[p].servings);
-  // } else if (localStorage.getItem(allRecipeHTMLIds[p]) === 'side-dish-3') {
-  //   menu.addItem(allRecipeHTMLIds[p].name,allRecipeHTMLIds[p].course, allRecipeHTMLIds[p].servings);
-  // } else if (localStorage.getItem(allRecipeHTMLIds[p]) === 'dessert-1') {
-  //   menu.addItem(allRecipeHTMLIds[p].name,allRecipeHTMLIds[p].course, allRecipeHTMLIds[p].servings);
-  // } else if (localStorage.getItem(allRecipeHTMLIds[p]) === 'dessert-2' ) {
-  //   menu.addItem(allRecipeHTMLIds[p].name,allRecipeHTMLIds[p].course, allRecipeHTMLIds[p].servings);
-  // } else if (localStorage.getItem(allRecipeHTMLIds[p]) === 'dessert-3') {
-  //   menu.addItem(allRecipeHTMLIds[p].name,allRecipeHTMLIds[p].course, allRecipeHTMLIds[p].servings);
-  // } else if (localStorage.getItem(allRecipeHTMLIds[p]) === 'beverage-1') {
-  //   menu.addItem(allRecipeHTMLIds[p].name,allRecipeHTMLIds[p].course, allRecipeHTMLIds[p].servings);
-  // } else if (localStorage.getItem(allRecipeHTMLIds[p]) === 'beverage-2') {
-  //   menu.addItem(allRecipeHTMLIds[p].name,allRecipeHTMLIds[p].course, allRecipeHTMLIds[p].servings);
-  // } else if (localStorage.getItem(allRecipeHTMLIds[p]) === 'beverage-3') {
-  //   menu.addItem(allRecipeHTMLIds[p].name,allRecipeHTMLIds[p].course, allRecipeHTMLIds[p].servings);
-  // }
-  //console.log(menu);
+  //console.log('obj in for loop ' + JSON.parse(localStorage.getItem(allRecipeHTMLIds[p])));
+  temp = JSON.parse(localStorage.getItem(allRecipeHTMLIds[p]));
+  if(temp !== null) {
+    menu.addItem(temp.name, temp.course, temp.servings);
+    console.log(menu);
+  }
 }
 
 
