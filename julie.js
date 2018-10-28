@@ -218,7 +218,7 @@ var showMenuTable = function() {
     tdLinkEl.textContent = ('X');
     tdLinkEl.classList.add('removelistitem');
     tdLinkEl.id= menu.recipe[i].name;
-    console.log('tdLinkEl ' + tdLinkEl);
+
 
     var tdRecipeEl = document.createElement('td');
     tdRecipeEl.textContent = menu.recipe[i].name;
@@ -279,8 +279,8 @@ menuclick.addEventListener('click', removeItemFromMenu);
 var menu = new Menu([]);
 
 var allRecipeHTMLIds = ['main-dish-1','main-dish-2','main-dish-3','appetizer-1','appetizer-2','appetizer-3','side-dish-1','side-dish-2','side-dish-3','dessert-1','dessert-2','dessert-3','beverage-1','beverage-2','beverage-3'];
-console.log(JSON.parse(localStorage.getItem(allRecipeHTMLIds[0])) !== null);
-console.log(JSON.parse(localStorage.getItem(allRecipeHTMLIds[0])));
+//console.log(JSON.parse(localStorage.getItem(allRecipeHTMLIds[0])) !== null);
+//console.log(JSON.parse(localStorage.getItem(allRecipeHTMLIds[0])));
 
 var temp;
 //var temp= JSON.parse(localStorage.getItem(allRecipeHTMLIds[0]));
@@ -292,18 +292,37 @@ for (var p= 0; p < allRecipeHTMLIds.length; p++) {
   temp = JSON.parse(localStorage.getItem(allRecipeHTMLIds[p]));
   if(temp !== null) {
     menu.addItem(temp.name, temp.course, temp.servings);
-    console.log(menu);
+    //console.log(menu);
   }
 }
-
-//making a change so i can git ACP
-
-// menu.addItem(recipeCreamCorn.name,recipeCreamCorn.course,recipeCreamCorn.servings);
-// menu.addItem(recipeUltGreenBeanCass.name,recipeUltGreenBeanCass.course,recipeUltGreenBeanCass.servings);
 
 menu.saveToLocalStorage();
 
 renderMenuTable();
+
+//button to take you back to add recipes
+var moreRecipeButtonHandler = function(event){
+  event.preventDefault();
+  console.log('in more recipe handler');
+  //var moreRecipeButtonDom = document.getElementById('goback');
+  location.href = 'index.html';
+};
+
+var moreRecipeButton = document.getElementById('goback');
+moreRecipeButton.addEventListener('click', moreRecipeButtonHandler);
+
+
+//button to take you to shopping list
+var shoppingListButtonHandler = function(event){
+  event.preventDefault();
+  console.log('in shopping list handler');
+  //var moreRecipeButtonDom = document.getElementById('buildshop');
+  location.href = 'list.html';
+};
+
+var shoppingListButton = document.getElementById('buildshop');
+shoppingListButton.addEventListener('click', shoppingListButtonHandler);
+
 
 // ======================
 // 
@@ -362,119 +381,3 @@ mainButton1.addEventListener('submit', main1ButtonClickHandler);
 
 
 //julie testing for making it a loop instead of all the individual code
-//===============
-
-//code for main JS
-// var side1ButtonClickHandler = function(event){
-//   event.preventDefault();
-//   // console.log(event);
-//   if (localStorage.getItem('side-dish-1')) {
-//     localStorage.removeItem('side-dish-1');
-//     sideButton1.setAttribute('class', '');
-//     console.log(sideButton1);
-//   } else if(event.target.id === 'side-dish-1'){
-//     var saveRecipe = JSON.stringify(side1);
-//     // console.log(saveRecipe);
-//     sideButton1.setAttribute('class', 'selected');
-//     console.log(sideButton1);
-//     localStorage.setItem('side-dish-1', saveRecipe);
-//   }
-// };
-// var sideButton1 = document.getElementById('side-dish-1');
-// sideButton1.addEventListener('submit', side1ButtonClickHandler);
-
-// var side2ButtonClickHandler = function(event){
-//   event.preventDefault();
-//   // console.log(event);
-//   if (localStorage.getItem('side-dish-2')) {
-//     localStorage.removeItem('side-dish-2');
-//     sideButton2.setAttribute('class', '');
-//     console.log(sideButton2);
-//   } else if(event.target.id === 'side-dish-2'){
-//     var saveRecipe = JSON.stringify(side2);
-//     // console.log(saveRecipe);
-//     sideButton2.setAttribute('class', 'selected');
-//     console.log(sideButton2);
-//     localStorage.setItem('side-dish-2', saveRecipe);
-//   }
-// };
-// var sideButton2 = document.getElementById('side-dish-2');
-// sideButton2.addEventListener('submit', side2ButtonClickHandler);
-
-// var side3ButtonClickHandler = function(event){
-//   event.preventDefault();
-//   // console.log(event);
-//   if (localStorage.getItem('side-dish-3')) {
-//     localStorage.removeItem('side-dish-3');
-//     sideButton3.setAttribute('class', '');
-//     console.log(sideButton3);
-//   } else if(event.target.id === 'side-dish-3'){
-//     var saveRecipe = JSON.stringify(side3);
-//     // console.log(saveRecipe);
-//     sideButton3.setAttribute('class', 'selected');
-//     console.log(sideButton3);
-//     localStorage.setItem('side-dish-3', saveRecipe);
-//   }
-// };
-// var sideButton3 = document.getElementById('side-dish-3');
-// sideButton3.addEventListener('submit', side3ButtonClickHandler);
-
-// var side4ButtonClickHandler = function(event){
-//   event.preventDefault();
-//   // console.log(event);
-//   if (localStorage.getItem('side-dish-4')) {
-//     localStorage.removeItem('side-dish-4');
-//     sideButton4.setAttribute('class', '');
-//     console.log(sideButton4);
-//   } else if(event.target.id === 'side-dish-4'){
-//     var saveRecipe = JSON.stringify(side4);
-//     // console.log(saveRecipe);
-//     sideButton4.setAttribute('class', 'selected');
-//     console.log(sideButton4);
-//     localStorage.setItem('side-dish-4', saveRecipe);
-//   }
-// };
-// var sideButton4 = document.getElementById('side-dish-4');
-// sideButton4.addEventListener('submit', side4ButtonClickHandler);
-
-// var side5ButtonClickHandler = function(event){
-//   event.preventDefault();
-//   // console.log(event);
-//   if (localStorage.getItem('side-dish-5')) {
-//     localStorage.removeItem('side-dish-5');
-//     sideButton5.setAttribute('class', '');
-//     console.log(sideButton5);
-//   } else if(event.target.id === 'side-dish-5'){
-//     var saveRecipe = JSON.stringify(side5);
-//     // console.log(saveRecipe);
-//     sideButton5.setAttribute('class', 'selected');
-//     console.log(sideButton5);
-//     localStorage.setItem('side-dish-5', saveRecipe);
-//   }
-// };
-// var sideButton5 = document.getElementById('side-dish-5');
-// sideButton5.addEventListener('submit', side5ButtonClickHandler);
-
-// var side6ButtonClickHandler = function(event){
-//   event.preventDefault();
-//   // console.log(event);
-//   if (localStorage.getItem('side-dish-6')) {
-//     localStorage.removeItem('side-dish-6');
-//     sideButton6.setAttribute('class', '');
-//     console.log(sideButton6);
-//   } else if(event.target.id === 'side-dish-6'){
-//     var saveRecipe = JSON.stringify(side6);
-//     // console.log(saveRecipe);
-//     sideButton6.setAttribute('class', 'selected');
-//     console.log(sideButton6);
-//     localStorage.setItem('side-dish-6', saveRecipe);
-//   }
-// };
-// var sideButton6 = document.getElementById('side-dish-6');
-// sideButton6.addEventListener('submit', side6ButtonClickHandler);
-
-
-
-// ======================
-// 
-// ======================
