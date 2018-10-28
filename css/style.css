@@ -166,6 +166,10 @@ button {
   margin-bottom: 1px;
   border-color: 1px solid white;
 }
+
+fieldset {
+  border: 0px;
+}
 footer {
   font-family: 'Simonetta', cursive;
   text-align: center;
