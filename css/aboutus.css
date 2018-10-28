@@ -1,0 +1,37 @@
+body {
+  width:960px;
+}
+
+div.photo-break {
+  position: float;
+  width: 960x;
+  height: 45px; /*the height did nothing*/
+}
+
+h2 {
+  margin: 5px;
+  text-align: center;
+}
+
+.team-images {
+  width: 960px;
+}
+.team-images ul {
+  width: 960px;
+  height: 200px;
+}
+
+.team-images ul li {
+  float: left;
+  width: 180px;
+  list-style-type: none;
+  margin: 5px;
+  background-color: blue;
+}
+
+
+.team-images img {
+  width: 130px;
+  height: 130px;
+  margin: 25px;
+}
