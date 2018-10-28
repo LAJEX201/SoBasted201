@@ -46,9 +46,10 @@ nav ul li{
   width: 217px;
   padding: 10px;
   margin-top: -10px;
-  margin-bottom: -10px;
+  margin-bottom: 3px;
   text-align: center;
   font-size: 18px;
+  box-shadow: 0 4px 0 0 rgb(150,0,0);
 }
 
 a{
@@ -64,6 +65,7 @@ body{
 
 body img{
   width: 960px;
+  margin-top: 3px;
 }
 
 hr{
@@ -94,6 +96,7 @@ hr{
   text-align: center;
   color: white;
   border-radius: 15px;
+  box-shadow: 4px 5px 2px rgb(192,0,0);
 }
 
 h5{
@@ -102,6 +105,15 @@ h5{
   margin-top: -1px;
   font-style: italic;
   font-size: 9px;
+  width: 100px;
+}
+
+h5.serving-size {
+  width: 100px;
+  float: right;
+  margin-right: 50px;
+  text-align: right;
+  margin-bottom: -30px;
 }
 
 .course > ul > li > img {
@@ -126,11 +138,13 @@ h5{
 }
 
 .sel {
-  width: 100px;
+  width: 95px;
   float: left;
-  height: 23px;
+  height: 28.4px;
   margin-left: 50px;
   margin-top: -8px;
+  font-family: 'Simonetta', cursive;
+  border:2px solid rgb(192,0,0);
 }
 
 input {
@@ -141,38 +155,61 @@ input {
   border-radius: 5px;
   font-size: 12px;
   float: right;
-  margin-right: 50px;
-  margin-top: -8px;
+  margin-top: -28px;
+  margin-left: 150px;
+  box-shadow: 0 4px 0 0 rgb(150,0,0);
+}
 
+input:active{
+  box-shadow: none;
+  top: 10px;
+  margin-bottom: 0;
+}
+
+input:hover{
+  background-color: rgb(53, 0, 0);
+}
+
+input:focus {
+  outline:0 !important;
 }
 
 div.photo-break {
   width: 960px;
-  height: 4px;
+  height: 20px;
+  margin-bottom: 27px;
 }
 
 div.photo-break img {
   margin-top: -3px;
+  
 }
 
 button {
-  background-color: rgb(133, 190, 100);
+  background-color: rgb(192, 0, 0);
   font-family: 'Simonetta', cursive;
   color: white;
   font-size: 25px;
-  margin-top: -3px;
+  margin-top: 10px;
   width: 200px;
   margin-left: 375px;
-  margin-bottom: 1px;
+  margin-bottom: 17px;
   border-color: 1px solid white;
+  box-shadow: 0 4px 0 0 rgb(150,0,0);
+  border-radius: 5px;
 }
 
 fieldset {
   border: 0px;
+  width: 200px;
+  padding: 0px;
 }
+
 footer {
   font-family: 'Simonetta', cursive;
   text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 footer p:first-child {
