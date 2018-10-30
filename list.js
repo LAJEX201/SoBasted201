@@ -1,7 +1,7 @@
 'use strict';
 
-var ingredients = [];
-totaledIngre = {};
+var ingreQty = {};
+var uniqueIngre = [];
 var shopListTable = document.getElementById('shopping-list');
 var tableHeaders = ['Spices', 'Nuts', 'Dairy', 'Condiments', 'Produce', 'Other-Grocery', 'Baking', 'Meat', 'Frozen', 'Juice & Beverages', 'Wine & Liquor'];
 
@@ -29,22 +29,14 @@ var allRecipesSelected15;
 // var allRecipesSelected18;
 
 var staticIngredientsArrayCreator = function(ingredient){
-var doesIngredientExist = false;
-var indexOfIngredientExist = -1;
-
-for (var i = 0; i < ingredients.length; i ++){
-  if (name == ingredients[i].name){
-    indexOfIngredientExist = i;
-    doesIngredientExist = true;
-  }
-}
-
-if (doesIngredientExist){
-  ingredients[indexOfIngredientExist].quantity = ingredients[indexOfIngredientExist].quantity + qty;
-} else {
-  ingredients.push(ingredient);
-}
+    if (!uniqueIngre.includes(ingredient.name)){
+      uniqueIngre.push(ingredient.name)
+      ingreQty[ingredient.name] = ingredient.quantity  
+    } else {
+      ingreQty[ingredient.name] += ingredient.quantity
+    }
 };
+// uniqueIngre[0]+' '+ingreQty[uniqueIngre[0]]+' cups'
 
 if(localStorage.getItem('appetizer-1')){
   allRecipesSelected1 = JSON.parse(localStorage.getItem('appetizer-1'));
@@ -135,7 +127,7 @@ if(localStorage.getItem('beverages-1')){
   for(var c = 0; c < allRecipesSelected13.ingredients.length; c++){
     staticIngredientsArrayCreator(allRecipesSelected13.ingredients[c]);
     
-  
+  }
 };
 if(localStorage.getItem('beverages-2')){
   allRecipesSelected14 = JSON.parse(localStorage.getItem('beverages-2'));
@@ -168,40 +160,32 @@ if(localStorage.getItem('beverages-3')){
 //   }
 // };
 
-for(var r = 0; r < ingredients.length; r++){
-    if(!totaledIngre[ingredients[r].name]){
-      totaledIngre[ingredients[r].name]={quantity:ingredients[r].quantity, measurementunit:ingredients[r].measurementunit, location:ingredients[r].location};
-    } else{
-      totaledIngre[ingredients[r].name].quantity = totaledIngre[ingredients[r].name].quantity+ingredients[r].quantity;
-    }
-};
-
 //==============================================================================================================================================================================
 //  Render Shopping List Table
 //==============================================================================================================================================================================
 
-var renderAsATableHeader = function(){
-  var theadEl = document.getElementById('thead');
-  for(var h = 0; h < tableHeaders.length; h++){
-    var tdEl = document.createElement('td');
-    tdEl.textContent = tableHeaders[h].toUpperCase;
-    theadEl.appendChild(tdEl);
-    if(totaledIngre[r].location === tableHeaders[h]){
-      var renderAsATableBody = function(){
-        for(var i = 0; i < ingredients.length; i++) {
-          var tbEl = document.getElementById('tbody');
-          var trEl = document.createElement('tr');
-          tdEl = document.createElement('td');
-          tdEl.textContent = totaledIngre;
-          trEl.appendChild(tdEl);
-          tbEl.appendChild(trEl);
-          shopListTable.appendChild(tbEl);
-        }
-      };
-    }
-    renderAsATableBody();
-  }
-  shopListTable.appendChild(theadEl);
-};
+// var renderAsATableHeader = function(){
+//   var theadEl = document.createElement('thead');
+//   for(var h = 0; h < tableHeaders.length; h++){
+//     var thEl = document.createElement('th');
+//     thEl.textContent = tableHeaders[h].toUpperCase;
+//     theadEl.appendChild(thEl);
+//     if([r].location === tableHeaders[h]){
+//       var renderAsATableBody = function(){
+//         for(var i = 0; i < ingredients.length; i++) {
+//           var tbEl = document.getElementById('tbody');
+//           var trEl = document.createElement('tr');
+//           tdEl = document.createElement('td');
+//           tdEl.textContent = totaledIngre;
+//           trEl.appendChild(tdEl);
+//           tbEl.appendChild(trEl);
+//           shopListTable.appendChild(tbEl);
+//         }
+//       };
+//     }
+//     renderAsATableBody();
+//   }
+//   shopListTable.appendChild(theadEl);
+// };
 
-renderAsATableHeader();
+// renderAsATableHeader();

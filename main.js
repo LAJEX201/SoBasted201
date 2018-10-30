@@ -382,7 +382,7 @@ var main3ButtonClickHandler = function(event){
     localStorage.removeItem('main-dish-3');
     mainButton3.setAttribute('class', '');
   } else if(event.target.id === 'main-dish-3'){
-    var saveRecipe = JSON.stringify(mainRecipeHam);
+    var saveRecipe = JSON.stringify(mainRecipeMapleTurkey);
     mainButton3.setAttribute('class', 'selected');
     // console.log(mainButton3);
     localStorage.setItem('main-dish-3', saveRecipe);
