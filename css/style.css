@@ -51,6 +51,10 @@ nav ul li{
   font-size: 18px;
 }
 
+nav ul li:hover{
+  background-color: rgb(110, 0, 0);
+}
+
 a{
   text-decoration: none;
   color: white;
@@ -95,6 +99,7 @@ hr{
   text-align: center;
   color: white;
   border-radius: 15px;
+  box-shadow: 4px 5px 2px rgb(150,0,0);
 }
 
 h5{
@@ -141,19 +146,40 @@ h5.serving-size {
   height: 28.4px;
   margin-left: 50px;
   margin-top: -8px;
+  font-family: 'Simonetta', cursive;
+  border: 2px solid rgb(192, 0, 0);
+  border-radius: 5px;
+  box-shadow: 0 2px 0 0 rgb(150, 0, 0);
 }
 
 input {
   background-color: rgb(192, 0, 0);
   color: white;
   font-family: 'Simonetta', cursive;
-  padding: 1px 3px;
+  padding: 4px 8px;
   border-radius: 5px;
   font-size: 12px;
   float: right;
   margin-top: -28px;
   margin-left: 150px;
+  box-shadow: 0 4px 0 0 rgb(150, 0, 0);
 }
+
+input:active {
+  box-shadow: none;
+}
+
+input:hover {
+  background-color: rgb(110, 0, 0);
+}
+
+input:focus {
+  outline: 0 !important;
+}
+
+/* .selected > fieldset > {
+  background-color: rgb yellow;
+} */
 
 div.photo-break {
   width: 960px;
@@ -175,6 +201,21 @@ button {
   width: 200px;
   margin-left: 375px;
   margin-bottom: 17px;
+  border-color: 1px solid white;
+  box-shadow: 0 4px 0 0 rgb(150, 0, 0);
+  border-radius: 5px;
+}
+
+button:active {
+  box-shadow: none;
+}
+
+button:hover {
+  background-color: rgb(110, 0, 0);
+}
+
+button:focus {
+  outline: 0 !important;
 }
 
 fieldset {
