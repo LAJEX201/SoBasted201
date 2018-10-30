@@ -5,7 +5,6 @@ body {
 div.photo-break {
   position: float;
   width: 960x;
-  height: 45px; /*the height did nothing*/
 }
 
 h2 {
@@ -19,6 +18,8 @@ h2 {
 .team-images ul {
   width: 960px;
   height: 250px;
+  list-style-type: none;
+  padding-left: 0;
 }
 
 .team-images ul li {
@@ -26,22 +27,40 @@ h2 {
   width: 180px;
   height: 250px;
   list-style-type: none;
-  margin: 5px;
   background-color: rgb(247,150,70);
+  border-radius: 10px;
+  box-shadow: 4px 5px 2px rgb(150,0,0);
+}
+
+.team-images > ul > :nth-child(2){
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.team-images > ul > :nth-child(4){
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .team-images ul li p {
   text-align: center;
-  color: rgb(236, 234, 234);
+  color:white;
   font-weight: bold;
+  font-size: 20px;
   margin: 1px;
   padding-top: 15px;
 }
 
-.team-images ul li a {
-  /* width: 300px;  this didn't change its width so i couldn't get it center*/
-  text-align: center;/*this didn't actually do anything :( */
-
+.team-images > ul > li > a {
+  width: 60px;
+  margin-right: 60px;
+  float: right;
+  text-align: center;
+  font-family: 'Simonetta', cursive;
+  font-style: italics;
+  font-size: 12px;
+  margin-top: -5px; 
+  color: white;
 }
 
 .team-images img {
@@ -52,4 +71,5 @@ h2 {
   padding-top: 15px;
   padding-bottom: 15px;
   border: 3px solid rgb(192,0,0);
+  border-radius: 10px;
 }

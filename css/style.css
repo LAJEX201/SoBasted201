@@ -204,6 +204,7 @@ button {
   border-color: 1px solid white;
   box-shadow: 0 4px 0 0 rgb(150, 0, 0);
   border-radius: 5px;
+  padding:4px;
 }
 
 button:active {

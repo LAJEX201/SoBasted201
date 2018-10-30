@@ -148,7 +148,7 @@ sideRecipeShallots.ingredientsArrayCreator ('Crème fraîche', 1, 'cups', 'Dairy
 sideRecipeShallots.ingredientsArrayCreator ('Whole milk', .5, 'cups', 'Dairy');
 // sideRecipeShallots.ingredientsArrayCreator ('Freshly ground black pepper', 1, 'each', 'Spices');
 
-var sideRecipeRoastedBrussels = new RecipesConstructor ('Roasted Brussels Sprouts with Balsamin Carmelized Onions & Bacon', 4, 'Side Dish');
+var sideRecipeRoastedBrussels = new RecipesConstructor ('Roasted Brussels Sprouts with Caramelized Onions & Bacon', 4, 'Side Dish');
 sideRecipeRoastedBrussels.ingredientsArrayCreator ('Brussel Sprouts', 4, 'cups', 'Produce');
 sideRecipeRoastedBrussels.ingredientsArrayCreator ('Bacon', .25, 'lbs', 'Meat');
 sideRecipeRoastedBrussels.ingredientsArrayCreator ('Butter', .0625, 'cups', 'Dairy');
@@ -159,7 +159,7 @@ sideRecipeRoastedBrussels.ingredientsArrayCreator ('Balsamic vinegar', .5, 'cups
 // sideRecipeRoastedBrussels.ingredientsArrayCreator ('Salt', 1, 'each', 'Spices'); //was to taste
 // sideRecipeRoastedBrussels.ingredientsArrayCreator ('Pepper', 1, 'each', 'Spices'); //was to taste
 
-var sideRecipeGreenBean = new RecipesConstructor ('The Ultimate Homemade Green Bean Casserole Recipe', 8, 'Side Dish');
+var sideRecipeGreenBean = new RecipesConstructor ('Ultimate Homemade Green Bean Casserole', 8, 'Side Dish');
 sideRecipeGreenBean.ingredientsArrayCreator ('shallots', 4.5, 'cups', 'Produce');
 sideRecipeGreenBean.ingredientsArrayCreator ('Canola oil', 2, 'cups', 'other-grocery');
 // sideRecipeGreenBean.ingredientsArrayCreator ('Kosher salt', 1, 'each', 'Spices');
@@ -188,7 +188,7 @@ sideRecipeCreamedCorn.ingredientsArrayCreator ('Flour', .1875, 'cups', 'Baking')
 sideRecipeCreamedCorn.ingredientsArrayCreator ('Whole Milk', 2, 'cups', 'Dairy');
 sideRecipeCreamedCorn.ingredientsArrayCreator ('Sugar', .125, 'cups', 'Baking');
 //========================================================================================================================================================================
-var dessertRecipePumpkinPie = new RecipesConstructor ('The Great Pumpkin Pie Recipe', 8, 'dessert');
+var dessertRecipePumpkinPie = new RecipesConstructor ('Pumpkin Pie', 8, 'dessert');
 dessertRecipePumpkinPie.ingredientsArrayCreator ('fresh cranberries', 1,'cups', 'produce');
 dessertRecipePumpkinPie.ingredientsArrayCreator ('sugar', 2,'cups', 'baking');
 dessertRecipePumpkinPie.ingredientsArrayCreator ('pre-made pie crust (2 crusts)', 1, 'each', 'other-grocery');
@@ -224,7 +224,7 @@ dessertRecipeTart.ingredientsArrayCreator ('eggs', 1, 'each', 'dairy');
 // dessertRecipeTart.ingredientsArrayCreator ('cooking spray', 1, 'spray', 'baking'); //how do we do the cooking spray?
 dessertRecipeTart.ingredientsArrayCreator ('powdered sugar', 1, 'teaspoons', 'baking'); //there is not actually a measure for the sugar...
 
-var dessertRecipeArkansas = new RecipesConstructor ('Arkansas Black Apple Pie with Caramel Sauce Recipe', 8, 'dessert');
+var dessertRecipeArkansas = new RecipesConstructor ('Apple Pie with Caramel Sauce', 8, 'dessert');
 dessertRecipeArkansas.ingredientsArrayCreator ('apples', 6, 'each', 'produce');
 dessertRecipeArkansas.ingredientsArrayCreator ('lemons', 1, 'each', 'produce');
 dessertRecipeArkansas.ingredientsArrayCreator ('sugar', 1, 'cups', 'baking');
@@ -237,7 +237,7 @@ dessertRecipeArkansas.ingredientsArrayCreator ('butter', .125, 'tablespoons', 'd
 dessertRecipeArkansas.ingredientsArrayCreator ('eggs', 1, 'each', 'dairy');
 dessertRecipeArkansas.ingredientsArrayCreator ('sugar', .125, 'cups', 'baking');
 //========================================================================================================================================================================
-var beverageRecipeCider = new RecipesConstructor('MJ\'s Mulled Cider', 8, 'beverages');
+var beverageRecipeCider = new RecipesConstructor('Mulled Cider', 8, 'beverages');
 beverageRecipeCider.ingredientsArrayCreator('Apple Cider', 8, 'cups', 'juice & beverages');
 beverageRecipeCider.ingredientsArrayCreator('Mulling Spices', 0.25, 'cups', 'spices');
 
@@ -253,7 +253,7 @@ beverageRecipeSangria.ingredientsArrayCreator('orange juice', 0.25, 'cups', 'jui
 beverageRecipeSangria.ingredientsArrayCreator('lemon juice', 2, 'tablespoons', 'produce');
 beverageRecipeSangria.ingredientsArrayCreator('club soda', 1, 'cups', 'juice & beverages');
 
-var beverageRecipePunch = new RecipesConstructor('Lusious Slush Punch', 24, 'beverages');
+var beverageRecipePunch = new RecipesConstructor('Luscious Slush Punch', 24, 'beverages');
 beverageRecipePunch.ingredientsArrayCreator('sugar', 2.5, 'cups', 'baking');
 beverageRecipePunch.ingredientsArrayCreator('lemon juice', 10.66, 'tablespoons', 'produce');
 beverageRecipePunch.ingredientsArrayCreator('orange juice', 4, 'cups', 'juice & beverages');
