@@ -277,7 +277,6 @@ var appButton1 = document.getElementById('appetizer-1');
 appButton1.addEventListener('submit', app1ButtonClickHandler);
 
 /////////////////////////////////APPETIZER 2////////////////////////////////////////////////
-
 var app2ButtonClickHandler = function(event){
   event.preventDefault();
   // console.log(event);
