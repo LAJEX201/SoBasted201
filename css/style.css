@@ -46,7 +46,7 @@ nav ul li{
   width: 217px;
   padding: 10px;
   margin-top: -10px;
-  margin-bottom: -10px;
+  margin-bottom: -1px;
   text-align: center;
   font-size: 18px;
 }
@@ -64,6 +64,7 @@ body{
 
 body img{
   width: 960px;
+  margin-top: 3px;
 }
 
 hr{
@@ -102,6 +103,15 @@ h5{
   margin-top: -1px;
   font-style: italic;
   font-size: 9px;
+  width: 100px;
+}
+
+h5.serving-size {
+  width: 100px;
+  float: right;
+  margin-right: 50px;
+  text-align: right;
+  margin-bottom: -30px;
 }
 
 .course > ul > li > img {
@@ -126,9 +136,9 @@ h5{
 }
 
 .sel {
-  width: 100px;
+  width: 95px;
   float: left;
-  height: 23px;
+  height: 28.4px;
   margin-left: 50px;
   margin-top: -8px;
 }
@@ -141,38 +151,43 @@ input {
   border-radius: 5px;
   font-size: 12px;
   float: right;
-  margin-right: 20px;
-  margin-top: -5px;
-
+  margin-top: -28px;
+  margin-left: 150px;
 }
 
 div.photo-break {
   width: 960px;
-  height: 4px;
+  height: 20px;
+  margin-bottom: 27px;
 }
 
 div.photo-break img {
   margin-top: -3px;
+  
 }
 
 button {
-  background-color: rgb(133, 190, 100);
+  background-color: rgb(192, 0, 0);
   font-family: 'Simonetta', cursive;
   color: white;
   font-size: 25px;
-  margin-top: -3px;
+  margin-top: 10px;
   width: 200px;
   margin-left: 375px;
-  margin-bottom: 1px;
-  border-color: 1px solid white;
+  margin-bottom: 17px;
 }
 
 fieldset {
   border: 0px;
+  width: 200px;
+  padding: 0px;
 }
+
 footer {
   font-family: 'Simonetta', cursive;
   text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 footer p:first-child {

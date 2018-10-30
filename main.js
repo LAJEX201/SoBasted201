@@ -258,34 +258,37 @@ var app1ButtonClickHandler = function(event){
   if (localStorage.getItem('appetizer-1')) {
     localStorage.removeItem('appetizer-1');
     appButton1.setAttribute('class', '');
-    console.log(appButton1);
+    // console.log(appButton1);
   } else if(event.target.id === 'appetizer-1'){
     var saveRecipe = JSON.stringify(appRecipePecan);
     // console.log(saveRecipe);
     appButton1.setAttribute('class', 'selected');
-    console.log(appButton1);
+    // console.log(appButton1);
     localStorage.setItem('appetizer-1', saveRecipe);
   }
-
 };
 
+// var changeButton = function(){
+//   document.getElementsByClassName('test');
+//   changeButton.getElementsByClassName('test').value = 'ADDED';
+// };
+// console.log(changeButton);
 var appButton1 = document.getElementById('appetizer-1');
 appButton1.addEventListener('submit', app1ButtonClickHandler);
 
 /////////////////////////////////APPETIZER 2////////////////////////////////////////////////
-
 var app2ButtonClickHandler = function(event){
   event.preventDefault();
   // console.log(event);
   if (localStorage.getItem('appetizer-2')) {
     localStorage.removeItem('appetizer-2');
     appButton2.setAttribute('class', '');
-    console.log(appButton2);
+    // console.log(appButton2);
   } else if(event.target.id === 'appetizer-2'){
     var saveRecipe = JSON.stringify(appRecipeBrie);
     // console.log(saveRecipe);
     appButton2.setAttribute('class', 'selected');
-    console.log(appButton2);
+    // console.log(appButton2);
     localStorage.setItem('appetizer-2', saveRecipe);
   }
 
@@ -302,12 +305,12 @@ var app3ButtonClickHandler = function(event){
   if (localStorage.getItem('appetizer-3')) {
     localStorage.removeItem('appetizer-3');
     appButton3.setAttribute('class', '');
-    console.log(appButton3);
+    // console.log(appButton3);
   } else if(event.target.id === 'appetizer-3'){
     var saveRecipe = JSON.stringify(appRecipePoppers);
     // console.log(saveRecipe);
     appButton3.setAttribute('class', 'selected');
-    console.log(appButton3);
+    // console.log(appButton3);
     localStorage.setItem('appetizer-3', saveRecipe);
   }
 
@@ -324,12 +327,12 @@ var main1ButtonClickHandler = function(event){
   if (localStorage.getItem('main-dish-1')) {
     localStorage.removeItem('main-dish-1');
     mainButton1.setAttribute('class', '');
-    console.log(mainButton1);
+    // console.log(mainButton1);
   } else if(event.target.id === 'main-dish-1'){
     var saveRecipe = JSON.stringify(mainRecipeCiderTurkey);
     // console.log(saveRecipe);
     mainButton1.setAttribute('class', 'selected');
-    console.log(mainButton1);
+    // console.log(mainButton1);
     localStorage.setItem('main-dish-1', saveRecipe);
   }
 };
@@ -345,12 +348,12 @@ var main2ButtonClickHandler = function(event){
   if (localStorage.getItem('main-dish-2')) {
     localStorage.removeItem('main-dish-2');
     mainButton2.setAttribute('class', '');
-    console.log(mainButton2);
+    // console.log(mainButton2);
   } else if(event.target.id === 'main-dish-2'){
     var saveRecipe = JSON.stringify(mainRecipeHam);
     // console.log(saveRecipe);
     mainButton2.setAttribute('class', 'selected');
-    console.log(mainButton2);
+    // console.log(mainButton2);
     localStorage.setItem('main-dish-2', saveRecipe);
   }
 };
@@ -368,7 +371,7 @@ var main3ButtonClickHandler = function(event){
   } else if(event.target.id === 'main-dish-3'){
     var saveRecipe = JSON.stringify(mainRecipeHam);
     mainButton3.setAttribute('class', 'selected');
-    console.log(mainButton3);
+    // console.log(mainButton3);
     localStorage.setItem('main-dish-3', saveRecipe);
   }
 };
