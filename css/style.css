@@ -42,7 +42,7 @@ nav ul {
 
 nav ul li{
   display: inline-block;
-  background-color: rgb(192,0,0);
+  background-color: rgb(192, 0, 0);
   width: 217px;
   padding: 10px;
   margin-top: -10px;
@@ -108,7 +108,7 @@ h5{
   width: 200px;
   margin-left: 50px;
   margin-right: 50px;
-  border: 3px solid rgb(192,0,0);
+  border: 3px solid rgb(192, 0, 0);
   border-radius: 15px;
 }
 
@@ -134,15 +134,15 @@ h5{
 }
 
 input {
-  background-color: rgb(192,0,0);
+  background-color: rgb(192, 0, 0);
   color: white;
   font-family: 'Simonetta', cursive;
-  padding: 4px 8px;
+  padding: 1px 3px;
   border-radius: 5px;
   font-size: 12px;
   float: right;
-  margin-right: 50px;
-  margin-top: -8px;
+  margin-right: 20px;
+  margin-top: -5px;
 
 }
 

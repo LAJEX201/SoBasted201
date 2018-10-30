@@ -119,6 +119,7 @@ var showMenuTable = function() {
     tdLinkEl.classList.add('removelistitem');
     tdLinkEl.id= menu.recipe[i].name;
 
+
     //makes the name of recipe
     var tdRecipeEl = document.createElement('td');
     tdRecipeEl.textContent = menu.recipe[i].name;
@@ -175,6 +176,7 @@ menuclick.addEventListener('click', removeItemFromMenu);
 
 var menu = new Menu([]);
 
+
 //these localstorage names
 var allRecipeHTMLIds = ['main-dish-1','main-dish-2','main-dish-3','appetizer-1','appetizer-2','appetizer-3','side-dish-1','side-dish-2','side-dish-3','dessert-1','dessert-2','dessert-3','beverages-1','beverages-2','beverages-3'];
 
@@ -187,11 +189,59 @@ for (var p= 0; p < allRecipeHTMLIds.length; p++) {
     menu.addItem(parsedRecipeFromLocStor.name, parsedRecipeFromLocStor.course, parsedRecipeFromLocStor.servings, parsedRecipeFromLocStor.ingredients,allRecipeHTMLIds[p]);
   }
 }
+
+var allRecipeHTMLIds = ['main-dish-1','main-dish-2','main-dish-3','appetizer-1','appetizer-2','appetizer-3','side-dish-1','side-dish-2','side-dish-3','dessert-1','dessert-2','dessert-3','beverage-1','beverage-2','beverage-3'];
+//console.log(JSON.parse(localStorage.getItem(allRecipeHTMLIds[0])) !== null);
+//console.log(JSON.parse(localStorage.getItem(allRecipeHTMLIds[0])));
+
+var temp;
+//var temp= JSON.parse(localStorage.getItem(allRecipeHTMLIds[0]));
+//console.log(temp);
+//console.log(temp.name);
+for (var p= 0; p < allRecipeHTMLIds.length; p++) {
+  //console.log('in for loop');
+  //console.log('obj in for loop ' + JSON.parse(localStorage.getItem(allRecipeHTMLIds[p])));
+  temp = JSON.parse(localStorage.getItem(allRecipeHTMLIds[p]));
+  if(temp !== null) {
+    menu.addItem(temp.name, temp.course, temp.servings);
+    //console.log(menu);
+  }
+}
+
 menu.saveToLocalStorage();
 renderMenuTable();
 
 //button to take you back to add recipes
 var moreRecipeButtonHandler = function(event){
+
+  event.preventDefault();
+  console.log('in more recipe handler');
+  //var moreRecipeButtonDom = document.getElementById('goback');
+  location.href = 'index.html';
+};
+
+var moreRecipeButton = document.getElementById('goback');
+moreRecipeButton.addEventListener('click', moreRecipeButtonHandler);
+
+
+//button to take you to shopping list
+var shoppingListButtonHandler = function(event){
+  event.preventDefault();
+  console.log('in shopping list handler');
+  //var moreRecipeButtonDom = document.getElementById('buildshop');
+  location.href = 'list.html';
+};
+
+var shoppingListButton = document.getElementById('buildshop');
+shoppingListButton.addEventListener('click', shoppingListButtonHandler);
+
+
+// ======================
+// 
+// ======================
+//helping write the code for side dishes buttons
+/*example
+var main1ButtonClickHandler = function(event){
   event.preventDefault();
   //console.log('in more recipe handler');
   //var moreRecipeButtonDom = document.getElementById('goback');
@@ -200,6 +250,7 @@ var moreRecipeButtonHandler = function(event){
 //note: will need to add this ID to the button on menu.html
 var moreRecipeButton = document.getElementById('goback');
 moreRecipeButton.addEventListener('click', moreRecipeButtonHandler);
+
 
 
 //button to take you to shopping list
@@ -214,4 +265,31 @@ var shoppingListButton = document.getElementById('buildshop');
 shoppingListButton.addEventListener('click', shoppingListButtonHandler);
 
 
+// var main1ButtonClickHandler = function(buttonName, event){
+//   for ( var t = 0; t < allRecipes.length; t++) {
+//     for (var w = 0; w < allRecipeHTMLIds.length; w++) {
+//       event.preventDefault();
+//       // console.log(event);
+//       if (localStorage.getItem(allRecipeHTMLIds[w])) {
+//         localStorage.removeItem(allRecipeHTMLIds[w]);
+//         buttonName.setAttribute('class', '');
+//         console.log(buttonName);
+//       } else if(event.target.id === allRecipeHTMLIds[w]){
+//         var saveRecipe = JSON.stringify(allRecipes[t]);
+//         // console.log(saveRecipe);
+//         buttonName.setAttribute('class', 'selected');
+//         console.log(buttonName);
+//         localStorage.setItem(allRecipeHTMLIds[w], saveRecipe);
+//       }
+//     }
+//   }
+// };
 
+// var main1Button = document.getElementById('main-dish-1');
+// main1Button.addEventListener('submit', main1ButtonClickHandler(main1Button));
+
+// var main2Button = document.getElementById('main-dish-2');
+// main2Button.addEventListener('submit', main2ButtonClickHandler(main2Button));
+
+
+//julie testing for making it a loop instead of all the individual code

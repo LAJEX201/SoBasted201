@@ -33,5 +33,7 @@ REMINDER: only Julie is updating README, slack me your time you work on this pro
   -julie, 1 hr clean up julie menu js (removed un-needed code and added comments to explain what does what)
   -julie 45 mins on remove
   -julie 1.5 hr time on about css
+  -all worked math function
+  -anthony and julie continued working through to 9pm
 
   
