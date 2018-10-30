@@ -28,7 +28,7 @@ var selectOptions = function(){
   for(var a = 0; a < servingOptions.length; a++){
     for(var b = 0; b < servingMultipler.length; b++){
       var option = document.createElement('option');
-      option.text = servingMultipler[b];
+      option.text = servingMultipler[b] ? ? n;
       servingOptions[a].add(option);
     }
   }
