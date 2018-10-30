@@ -27,4 +27,6 @@ REMINDER: only Julie is updating README, slack me your time you work on this pro
   -julie rendered menu and worked on removing from local storage/removing from list
   -lorin combined all's JS's to main.js
   -anthony rendered shopping list
+  -all worked math function
+  -anthony and julie continued working through to 9pm
   
