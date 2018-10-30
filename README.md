@@ -27,6 +27,13 @@ REMINDER: only Julie is updating README, slack me your time you work on this pro
   -julie rendered menu and worked on removing from local storage/removing from list
   -lorin combined all's JS's to main.js
   -anthony rendered shopping list
+  -julie and anthony did additinal work on menu buttons and math function from 830-930
+
+10-28-18
+  -julie, 1 hr clean up julie menu js (removed un-needed code and added comments to explain what does what)
+  -julie 45 mins on remove
+  -julie 1.5 hr time on about css
   -all worked math function
   -anthony and julie continued working through to 9pm
+
   

@@ -1,0 +1,55 @@
+body {
+  width:960px;
+}
+
+div.photo-break {
+  position: float;
+  width: 960x;
+  height: 45px; /*the height did nothing*/
+}
+
+h2 {
+  margin: 5px;
+  text-align: center;
+}
+
+.team-images {
+  width: 960px;
+}
+.team-images ul {
+  width: 960px;
+  height: 250px;
+}
+
+.team-images ul li {
+  float: left;
+  width: 180px;
+  height: 250px;
+  list-style-type: none;
+  margin: 5px;
+  background-color: rgb(247,150,70);
+}
+
+.team-images ul li p {
+  text-align: center;
+  color: rgb(236, 234, 234);
+  font-weight: bold;
+  margin: 1px;
+  padding-top: 15px;
+}
+
+.team-images ul li a {
+  /* width: 300px;  this didn't change its width so i couldn't get it center*/
+  text-align: center;/*this didn't actually do anything :( */
+
+}
+
+.team-images img {
+  width: 130px;
+  height: 130px;
+  margin: 5px 23px;
+  background-color:white;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: 3px solid rgb(192,0,0);
+}
