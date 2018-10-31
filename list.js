@@ -213,13 +213,13 @@ var showListTable = function() {
   //make header of table
   var headerTrEl = document.createElement('tr');
   var headElOne = document.createElement('th');
-  headElOne.textContent = 'Quantity';
+  headElOne.textContent = 'QUANTITY';
   var headElTwo = document.createElement('th');
-  headElTwo.textContent = 'Unit';
+  headElTwo.textContent = 'UNIT';
   var headElThree = document.createElement('th');
-  headElThree.textContent = 'Description';
+  headElThree.textContent = 'DESCRIPTION';
   var headElFour = document.createElement('th');
-  headElFour.textContent = 'Store Isle';
+  headElFour.textContent = 'STORE DEPARTMENT';
 
   headerTrEl.appendChild(headElOne);
   headerTrEl.appendChild(headElTwo);
