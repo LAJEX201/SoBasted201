@@ -36,9 +36,17 @@ REMINDER: only Julie is updating README, slack me your time you work on this pro
   -julie 1.5 hr time on about css
   
 10-29-18 600 to 9
-  xochil and erin css for index
-  lorin worked on button for index
-  julie merged menu with main document
-  anthony merged menu with main
+  -xochil and erin css for index
+  -lorin worked on button for index
+  -julie merged menu with main document
+  -anthony merged menu with main
+  -erin: Made CSS pretty for menu.html and finished css for about.html. Linked the buttons (need some help clearing local storage with the button on list.html... it is not behaving as expected).  This took about 2 hours. I will add css for color switching buttons tomorrow late morning/early afternoon.
+  -xocil, yesterday was button day for me... worked from 4:30-5:30 on CSS and then with Erin from 6:30-whenever... researched the presentation powerpoint guidelines which I will begin working on today before we all meet up as a group at 6:30.
+  -Anthony worked on mathematics for totalling ingredients from recipes selected from 6:30 to 9. Then mob programmed to start fresh from scratch with group and nicholas for help.
+
+10-30-18
+  -mob code about shopping list problem
+  -julie worked on rendering shopping list
+  -xochil worked on button on shopping list that clears local storage and goes back to home aka recipes page aka index.html
 
   
