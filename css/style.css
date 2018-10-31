@@ -219,147 +219,363 @@ button:focus {
 }
 
 #a1-clicked {
-  background-color: rgb(224, 200, 93);
+  background-color: rgb(142, 165, 67);
   font-family: 'Simonetta', cursive;
-  box-shadow: 0 4px 0 0 rgb(177, 144, 0);
+  box-shadow: 0 4px 0 0 rgb(42, 49, 20);
   border-color: 1px solid white;
-  color: rgb(110, 0, 0);
+  width: 69.94px;
+  margin-left: 180px;
+  color:white;
+}
+
+#a1-clicked:active {
+  box-shadow: none;
+}
+
+#a1-clicked:hover {
+  background-color: rgb(72, 83, 34);
+}
+
+#a1-clicked:focus {
+  outline: 0 !important;
 }
 
 #a2-clicked {
-  background-color: rgb(224, 200, 93);
+  background-color: rgb(142, 165, 67);
   font-family: 'Simonetta', cursive;
-  box-shadow: 0 4px 0 0 rgb(177, 144, 0);
+  box-shadow: 0 4px 0 0 rgb(42, 49, 20);
   border-color: 1px solid white;
-  color: rgb(110, 0, 0);
+  width: 69.94px;
+  margin-left: 180px;
+  color:white;
+}
+
+#a2-clicked:active {
+  box-shadow: none;
+}
+
+#a2-clicked:hover {
+  background-color: rgb(72, 83, 34);
+}
+
+#a2-clicked:focus {
+  outline: 0 !important;
 }
 
 #a3-clicked {
-  background-color: rgb(224, 200, 93);
+  background-color: rgb(142, 165, 67);
   font-family: 'Simonetta', cursive;
-  box-shadow: 0 4px 0 0 rgb(177, 144, 0);
+  box-shadow: 0 4px 0 0 rgb(42, 49, 20);
   border-color: 1px solid white;
-  color: rgb(110, 0, 0);
+  width: 69.94px;
+  margin-left: 180px;
+  color:white;
+}
+
+#a3-clicked:active {
+  box-shadow: none;
+}
+
+#a3-clicked:hover {
+  background-color: rgb(72, 83, 34);
+}
+
+#a3-clicked:focus {
+  outline: 0 !important;
 }
 
 #m1-clicked {
-  background-color: rgb(224, 200, 93);
+  background-color: rgb(142, 165, 67);
   font-family: 'Simonetta', cursive;
-  box-shadow: 0 4px 0 0 rgb(177, 144, 0);
+  box-shadow: 0 4px 0 0 rgb(42, 49, 20);
   border-color: 1px solid white;
-  color: rgb(110, 0, 0);
+  width: 69.94px;
+  margin-left: 180px;
+  color:white;
+}
+
+#m1-clicked:active {
+  box-shadow: none;
+}
+
+#m1-clicked:hover {
+  background-color: rgb(72, 83, 34);
+}
+
+#m1-clicked:focus {
+  outline: 0 !important;
 }
 
 #m2-clicked {
-  background-color: rgb(224, 200, 93);
+  background-color: rgb(142, 165, 67);
   font-family: 'Simonetta', cursive;
-  box-shadow: 0 4px 0 0 rgb(177, 144, 0);
+  box-shadow: 0 4px 0 0 rgb(42, 49, 20);
   border-color: 1px solid white;
-  color: rgb(110, 0, 0);
+  width: 69.94px;
+  margin-left: 180px;
+  color:white;
+}
+
+#m2-clicked:active {
+  box-shadow: none;
+}
+
+#m2-clicked:hover {
+  background-color: rgb(72, 83, 34);
+}
+
+#m2-clicked:focus {
+  outline: 0 !important;
 }
 
 #m3-clicked {
-  background-color: rgb(224, 200, 93);
+  background-color: rgb(142, 165, 67);
   font-family: 'Simonetta', cursive;
-  box-shadow: 0 4px 0 0 rgb(177, 144, 0);
+  box-shadow: 0 4px 0 0 rgb(42, 49, 20);
   border-color: 1px solid white;
-  color: rgb(110, 0, 0);
+  width: 69.94px;
+  margin-left: 180px;
+  color:white;
+}
+
+#m3-clicked:active {
+  box-shadow: none;
+}
+
+#m3-clicked:hover {
+  background-color: rgb(72, 83, 34);
+}
+
+#m3-clicked:focus {
+  outline: 0 !important;
 }
 
 #s1-clicked {
-  background-color: rgb(224, 200, 93);
+  background-color: rgb(142, 165, 67);
   font-family: 'Simonetta', cursive;
-  box-shadow: 0 4px 0 0 rgb(177, 144, 0);
+  box-shadow: 0 4px 0 0 rgb(42, 49, 20);
   border-color: 1px solid white;
-  color: rgb(110, 0, 0);
+  width: 69.94px;
+  margin-left: 180px;
+  color:white;
+}
+
+#s1-clicked:active {
+  box-shadow: none;
+}
+
+#s1-clicked:hover {
+  background-color: rgb(72, 83, 34);
+}
+
+#s1-clicked:focus {
+  outline: 0 !important;
 }
 
 #s2-clicked {
-  background-color: rgb(224, 200, 93);
+  background-color: rgb(142, 165, 67);
   font-family: 'Simonetta', cursive;
-  box-shadow: 0 4px 0 0 rgb(177, 144, 0);
+  box-shadow: 0 4px 0 0 rgb(42, 49, 20);
   border-color: 1px solid white;
-  color: rgb(110, 0, 0);
+  width: 69.94px;
+  margin-left: 180px;
+  color:white;
+}
+
+#s2-clicked:active {
+  box-shadow: none;
+}
+
+#s2-clicked:hover {
+  background-color: rgb(72, 83, 34);
+}
+
+#s2-clicked:focus {
+  outline: 0 !important;
 }
 
 #s3-clicked {
-  background-color: rgb(224, 200, 93);
+  background-color: rgb(142, 165, 67);
   font-family: 'Simonetta', cursive;
-  box-shadow: 0 4px 0 0 rgb(177, 144, 0);
+  box-shadow: 0 4px 0 0 rgb(42, 49, 20);
   border-color: 1px solid white;
-  color: rgb(110, 0, 0);
+  width: 69.94px;
+  margin-left: 180px;
+  color:white;
+}
+
+#s3-clicked:active {
+  box-shadow: none;
+}
+
+#s3-clicked:hover {
+  background-color: rgb(72, 83, 34);
+}
+
+#s3-clicked:focus {
+  outline: 0 !important;
 }
 
 /* #s4-clicked {
-  background-color: rgb(224, 200, 93);
+  background-color: rgb(142, 165, 67);
   font-family: 'Simonetta', cursive;
-  box-shadow: 0 4px 0 0 rgb(177, 144, 0);
+  box-shadow: 0 4px 0 0 rgb(42, 49, 20);
   border-color: 1px solid white;
-  color: rgb(110, 0, 0);
+  width: 69.94px;
+  margin-left: 180px;
+  color:white;
 }
 
 #s5-clicked {
-  background-color: rgb(224, 200, 93);
+  background-color: rgb(142, 165, 67);
   font-family: 'Simonetta', cursive;
-  box-shadow: 0 4px 0 0 rgb(177, 144, 0);
+  box-shadow: 0 4px 0 0 rgb(42, 49, 20);
   border-color: 1px solid white;
-  color: rgb(110, 0, 0);
+  width: 69.94px;
+  margin-left: 180px;
+  color:white;
 }
 
 #s6-clicked {
-  background-color: rgb(224, 200, 93);
+  background-color: rgb(142, 165, 67);
   font-family: 'Simonetta', cursive;
-  box-shadow: 0 4px 0 0 rgb(177, 144, 0);
+  box-shadow: 0 4px 0 0 rgb(42, 49, 20);
   border-color: 1px solid white;
-  color: rgb(110, 0, 0);
+  width: 69.94px;
+  margin-left: 180px;
+  color:white;
 } */
 
 #d1-clicked {
-  background-color: rgb(224, 200, 93);
+  background-color: rgb(142, 165, 67);
   font-family: 'Simonetta', cursive;
-  box-shadow: 0 4px 0 0 rgb(177, 144, 0);
+  box-shadow: 0 4px 0 0 rgb(42, 49, 20);
   border-color: 1px solid white;
-  color: rgb(110, 0, 0);
+  width: 69.94px;
+  margin-left: 180px;
+  color:white;
+}
+
+#d1-clicked:active {
+  box-shadow: none;
+}
+
+#d1-clicked:hover {
+  background-color: rgb(72, 83, 34);
+}
+
+#d1-clicked:focus {
+  outline: 0 !important;
 }
 
 #d2-clicked {
-  background-color: rgb(224, 200, 93);
+  background-color: rgb(142, 165, 67);
   font-family: 'Simonetta', cursive;
-  box-shadow: 0 4px 0 0 rgb(177, 144, 0);
+  box-shadow: 0 4px 0 0 rgb(42, 49, 20);
   border-color: 1px solid white;
-  color: rgb(110, 0, 0);
+  width: 69.94px;
+  margin-left: 180px;
+  color:white;
+}
+
+#d2-clicked:active {
+  box-shadow: none;
+}
+
+#d2-clicked:hover {
+  background-color: rgb(72, 83, 34);
+}
+
+#d2-clicked:focus {
+  outline: 0 !important;
 }
 
 #d3-clicked {
-  background-color: rgb(224, 200, 93);
+  background-color: rgb(142, 165, 67);
   font-family: 'Simonetta', cursive;
-  box-shadow: 0 4px 0 0 rgb(177, 144, 0);
+  box-shadow: 0 4px 0 0 rgb(42, 49, 20);
   border-color: 1px solid white;
-  color: rgb(110, 0, 0);
+  width: 69.94px;
+  margin-left: 180px;
+  color:white;
+}
+
+#d3-clicked:active {
+  box-shadow: none;
+}
+
+#d3-clicked:hover {
+  background-color: rgb(72, 83, 34);
+}
+
+#d3-clicked:focus {
+  outline: 0 !important;
 }
 
 #b1-clicked {
-  background-color: rgb(224, 200, 93);
+  background-color: rgb(142, 165, 67);
   font-family: 'Simonetta', cursive;
-  box-shadow: 0 4px 0 0 rgb(177, 144, 0);
+  box-shadow: 0 4px 0 0 rgb(42, 49, 20);
   border-color: 1px solid white;
-  color: rgb(110, 0, 0);
+  width: 69.94px;
+  margin-left: 180px;
+  color:white;
+}
+
+#b1-clicked:active {
+  box-shadow: none;
+}
+
+#b1-clicked:hover {
+  background-color: rgb(72, 83, 34);
+}
+
+#b1-clicked:focus {
+  outline: 0 !important;
 }
 
 #b2-clicked {
-  background-color: rgb(224, 200, 93);
+  background-color: rgb(142, 165, 67);
   font-family: 'Simonetta', cursive;
-  box-shadow: 0 4px 0 0 rgb(177, 144, 0);
+  box-shadow: 0 4px 0 0 rgb(42, 49, 20);
   border-color: 1px solid white;
-  color: rgb(110, 0, 0);
+  width: 69.94px;
+  margin-left: 180px;
+  color:white;
+}
+
+#b2-clicked:active {
+  box-shadow: none;
+}
+
+#b2-clicked:hover {
+  background-color: rgb(72, 83, 34);
+}
+
+#b2-clicked:focus {
+  outline: 0 !important;
 }
 
 #b3-clicked {
-  background-color: rgb(224, 200, 93);
+  background-color: rgb(142, 165, 67);
   font-family: 'Simonetta', cursive;
-  box-shadow: 0 4px 0 0 rgb(177, 144, 0);
+  box-shadow: 0 4px 0 0 rgb(42, 49, 20);
   border-color: 1px solid white;
-  color: rgb(110, 0, 0);
+  width: 69.94px;
+  margin-left: 180px;
+  color:white;
+}
+
+#b3-clicked:active {
+  box-shadow: none;
+}
+
+#b3-clicked:hover {
+  background-color: rgb(72, 83, 34);
+}
+
+#b3-clicked:focus {
+  outline: 0 !important;
 }
 
 fieldset {
