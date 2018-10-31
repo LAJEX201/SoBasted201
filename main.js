@@ -20,8 +20,21 @@ var IngredientsConstructor = function (name, qty, measurementunit, location) {
 };
 
 RecipesConstructor.prototype.ingredientsArrayCreator = function (name, qty, measurementunit, location) {
-  var ingredOne = new IngredientsConstructor (name, qty, measurementunit, location);
-  this.ingredients.push(ingredOne);
+  var doesIngredientExist = false;
+  var indexOfIngredientExist = -1;
+
+  for (var i = 0; i < this.ingredients; i ++){
+    if (name == this.ingredients[i].name){
+      indexOfIngredientExist = i;
+      doesIngredientExist = true;
+    }
+  }
+  if (doesIngredientExist){
+    this.ingredients[indexOfIngredientExist].quantity = this.ingredients[indexOfIngredientExist].quantity + qty;
+  } else {
+    var ingredOne = new IngredientsConstructor (name, qty, measurementunit, location);
+    this.ingredients.push(ingredOne);
+  }
 };
 
 var selectOptions = function(){
@@ -135,7 +148,7 @@ sideRecipeShallots.ingredientsArrayCreator ('Crème fraîche', 1, 'cups', 'Dairy
 sideRecipeShallots.ingredientsArrayCreator ('Whole milk', .5, 'cups', 'Dairy');
 // sideRecipeShallots.ingredientsArrayCreator ('Freshly ground black pepper', 1, 'each', 'Spices');
 
-var sideRecipeRoastedBrussels = new RecipesConstructor ('Roasted Brussels Sprouts with Balsamin Carmelized Onions & Bacon', 4, 'Side Dish');
+var sideRecipeRoastedBrussels = new RecipesConstructor ('Roasted Brussels Sprouts with Caramelized Onions & Bacon', 4, 'Side Dish');
 sideRecipeRoastedBrussels.ingredientsArrayCreator ('Brussel Sprouts', 4, 'cups', 'Produce');
 sideRecipeRoastedBrussels.ingredientsArrayCreator ('Bacon', .25, 'lbs', 'Meat');
 sideRecipeRoastedBrussels.ingredientsArrayCreator ('Butter', .0625, 'cups', 'Dairy');
@@ -146,7 +159,7 @@ sideRecipeRoastedBrussels.ingredientsArrayCreator ('Balsamic vinegar', .5, 'cups
 // sideRecipeRoastedBrussels.ingredientsArrayCreator ('Salt', 1, 'each', 'Spices'); //was to taste
 // sideRecipeRoastedBrussels.ingredientsArrayCreator ('Pepper', 1, 'each', 'Spices'); //was to taste
 
-var sideRecipeGreenBean = new RecipesConstructor ('The Ultimate Homemade Green Bean Casserole Recipe', 8, 'Side Dish');
+var sideRecipeGreenBean = new RecipesConstructor ('Ultimate Homemade Green Bean Casserole', 8, 'Side Dish');
 sideRecipeGreenBean.ingredientsArrayCreator ('shallots', 4.5, 'cups', 'Produce');
 sideRecipeGreenBean.ingredientsArrayCreator ('Canola oil', 2, 'cups', 'other-grocery');
 // sideRecipeGreenBean.ingredientsArrayCreator ('Kosher salt', 1, 'each', 'Spices');
@@ -175,7 +188,7 @@ sideRecipeCreamedCorn.ingredientsArrayCreator ('Flour', .1875, 'cups', 'Baking')
 sideRecipeCreamedCorn.ingredientsArrayCreator ('Whole Milk', 2, 'cups', 'Dairy');
 sideRecipeCreamedCorn.ingredientsArrayCreator ('Sugar', .125, 'cups', 'Baking');
 //========================================================================================================================================================================
-var dessertRecipePumpkinPie = new RecipesConstructor ('The Great Pumpkin Pie Recipe', 8, 'dessert');
+var dessertRecipePumpkinPie = new RecipesConstructor ('Pumpkin Pie', 8, 'dessert');
 dessertRecipePumpkinPie.ingredientsArrayCreator ('fresh cranberries', 1,'cups', 'produce');
 dessertRecipePumpkinPie.ingredientsArrayCreator ('sugar', 2,'cups', 'baking');
 dessertRecipePumpkinPie.ingredientsArrayCreator ('pre-made pie crust (2 crusts)', 1, 'each', 'other-grocery');
@@ -211,7 +224,7 @@ dessertRecipeTart.ingredientsArrayCreator ('eggs', 1, 'each', 'dairy');
 // dessertRecipeTart.ingredientsArrayCreator ('cooking spray', 1, 'spray', 'baking'); //how do we do the cooking spray?
 dessertRecipeTart.ingredientsArrayCreator ('powdered sugar', 1, 'teaspoons', 'baking'); //there is not actually a measure for the sugar...
 
-var dessertRecipeArkansas = new RecipesConstructor ('Arkansas Black Apple Pie with Caramel Sauce Recipe', 8, 'dessert');
+var dessertRecipeArkansas = new RecipesConstructor ('Apple Pie with Caramel Sauce', 8, 'dessert');
 dessertRecipeArkansas.ingredientsArrayCreator ('apples', 6, 'each', 'produce');
 dessertRecipeArkansas.ingredientsArrayCreator ('lemons', 1, 'each', 'produce');
 dessertRecipeArkansas.ingredientsArrayCreator ('sugar', 1, 'cups', 'baking');
@@ -224,7 +237,7 @@ dessertRecipeArkansas.ingredientsArrayCreator ('butter', .125, 'tablespoons', 'd
 dessertRecipeArkansas.ingredientsArrayCreator ('eggs', 1, 'each', 'dairy');
 dessertRecipeArkansas.ingredientsArrayCreator ('sugar', .125, 'cups', 'baking');
 //========================================================================================================================================================================
-var beverageRecipeCider = new RecipesConstructor('MJ\'s Mulled Cider', 8, 'beverages');
+var beverageRecipeCider = new RecipesConstructor('Mulled Cider', 8, 'beverages');
 beverageRecipeCider.ingredientsArrayCreator('Apple Cider', 8, 'cups', 'juice & beverages');
 beverageRecipeCider.ingredientsArrayCreator('Mulling Spices', 0.25, 'cups', 'spices');
 
@@ -240,7 +253,7 @@ beverageRecipeSangria.ingredientsArrayCreator('orange juice', 0.25, 'cups', 'jui
 beverageRecipeSangria.ingredientsArrayCreator('lemon juice', 2, 'tablespoons', 'produce');
 beverageRecipeSangria.ingredientsArrayCreator('club soda', 1, 'cups', 'juice & beverages');
 
-var beverageRecipePunch = new RecipesConstructor('Lusious Slush Punch', 24, 'beverages');
+var beverageRecipePunch = new RecipesConstructor('Luscious Slush Punch', 24, 'beverages');
 beverageRecipePunch.ingredientsArrayCreator('sugar', 2.5, 'cups', 'baking');
 beverageRecipePunch.ingredientsArrayCreator('lemon juice', 10.66, 'tablespoons', 'produce');
 beverageRecipePunch.ingredientsArrayCreator('orange juice', 4, 'cups', 'juice & beverages');
@@ -249,7 +262,8 @@ beverageRecipePunch.ingredientsArrayCreator('strawberry gelatin mix (6 oz)', 2, 
 beverageRecipePunch.ingredientsArrayCreator('pineapple juice', 5.75, 'cups', 'juice & beverages');
 
 //=================================MAIN PAGE CLICK HANDLERS=================================
-
+var inpuText = document.getElementsByTagName('input');
+// console.log(inpuText);
 /////////////////////////////////APPETIZER 1////////////////////////////////////////////////
 
 var app1ButtonClickHandler = function(event){
@@ -258,34 +272,45 @@ var app1ButtonClickHandler = function(event){
   if (localStorage.getItem('appetizer-1')) {
     localStorage.removeItem('appetizer-1');
     appButton1.setAttribute('class', '');
-    console.log(appButton1);
+    inpuText[0].setAttribute('id', 'a1');
+    inpuText[0].setAttribute('value', 'ADD TO MENU');
+    // console.log(appButton1);
   } else if(event.target.id === 'appetizer-1'){
     var saveRecipe = JSON.stringify(appRecipePecan);
     // console.log(saveRecipe);
     appButton1.setAttribute('class', 'selected');
-    console.log(appButton1);
+    inpuText[0].setAttribute('id', 'a1-clicked');
+    inpuText[0].setAttribute('value', 'ADDED');
+    // console.log(appButton1);
     localStorage.setItem('appetizer-1', saveRecipe);
   }
-
 };
 
+// var changeButton = function(){
+//   document.getElementsByClassName('test');
+//   changeButton.getElementsByClassName('test').value = 'ADDED';
+// };
+// console.log(changeButton);
 var appButton1 = document.getElementById('appetizer-1');
 appButton1.addEventListener('submit', app1ButtonClickHandler);
 
 /////////////////////////////////APPETIZER 2////////////////////////////////////////////////
-
 var app2ButtonClickHandler = function(event){
   event.preventDefault();
   // console.log(event);
   if (localStorage.getItem('appetizer-2')) {
     localStorage.removeItem('appetizer-2');
     appButton2.setAttribute('class', '');
-    console.log(appButton2);
+    inpuText[1].setAttribute('id', 'a2');
+    inpuText[1].setAttribute('value', 'ADD TO MENU');
+    // console.log(appButton2);
   } else if(event.target.id === 'appetizer-2'){
     var saveRecipe = JSON.stringify(appRecipeBrie);
     // console.log(saveRecipe);
     appButton2.setAttribute('class', 'selected');
-    console.log(appButton2);
+    inpuText[1].setAttribute('id', 'a2-clicked');
+    inpuText[1].setAttribute('value', 'ADDED');
+    // console.log(appButton2);
     localStorage.setItem('appetizer-2', saveRecipe);
   }
 
@@ -302,12 +327,16 @@ var app3ButtonClickHandler = function(event){
   if (localStorage.getItem('appetizer-3')) {
     localStorage.removeItem('appetizer-3');
     appButton3.setAttribute('class', '');
-    console.log(appButton3);
+    inpuText[2].setAttribute('id', 'a3');
+    inpuText[2].setAttribute('value', 'ADD TO MENU');
+    // console.log(appButton3);
   } else if(event.target.id === 'appetizer-3'){
     var saveRecipe = JSON.stringify(appRecipePoppers);
     // console.log(saveRecipe);
     appButton3.setAttribute('class', 'selected');
-    console.log(appButton3);
+    inpuText[2].setAttribute('id', 'a3-clicked');
+    inpuText[2].setAttribute('value', 'ADDED');
+    // console.log(appButton3);
     localStorage.setItem('appetizer-3', saveRecipe);
   }
 
@@ -324,12 +353,16 @@ var main1ButtonClickHandler = function(event){
   if (localStorage.getItem('main-dish-1')) {
     localStorage.removeItem('main-dish-1');
     mainButton1.setAttribute('class', '');
-    console.log(mainButton1);
+    inpuText[3].setAttribute('id', 'm1');
+    inpuText[3].setAttribute('value', 'ADD TO MENU');
+    // console.log(mainButton1);
   } else if(event.target.id === 'main-dish-1'){
     var saveRecipe = JSON.stringify(mainRecipeCiderTurkey);
     // console.log(saveRecipe);
     mainButton1.setAttribute('class', 'selected');
-    console.log(mainButton1);
+    inpuText[3].setAttribute('id', 'm1-clicked');
+    inpuText[3].setAttribute('value', 'ADDED');
+    // console.log(mainButton1);
     localStorage.setItem('main-dish-1', saveRecipe);
   }
 };
@@ -345,12 +378,16 @@ var main2ButtonClickHandler = function(event){
   if (localStorage.getItem('main-dish-2')) {
     localStorage.removeItem('main-dish-2');
     mainButton2.setAttribute('class', '');
-    console.log(mainButton2);
+    inpuText[4].setAttribute('id', 'm2');
+    inpuText[4].setAttribute('value', 'ADD TO MENU');
+    // console.log(mainButton2);
   } else if(event.target.id === 'main-dish-2'){
     var saveRecipe = JSON.stringify(mainRecipeHam);
     // console.log(saveRecipe);
     mainButton2.setAttribute('class', 'selected');
-    console.log(mainButton2);
+    inpuText[4].setAttribute('id', 'm2-clicked');
+    inpuText[4].setAttribute('value', 'ADDED');
+    // console.log(mainButton2);
     localStorage.setItem('main-dish-2', saveRecipe);
   }
 };
@@ -365,10 +402,14 @@ var main3ButtonClickHandler = function(event){
   if (localStorage.getItem('main-dish-3')) {
     localStorage.removeItem('main-dish-3');
     mainButton3.setAttribute('class', '');
+    inpuText[5].setAttribute('id', 'm3');
+    inpuText[5].setAttribute('value', 'ADD TO MENU');
   } else if(event.target.id === 'main-dish-3'){
-    var saveRecipe = JSON.stringify(mainRecipeHam);
+    var saveRecipe = JSON.stringify(mainRecipeMapleTurkey);
     mainButton3.setAttribute('class', 'selected');
-    console.log(mainButton3);
+    inpuText[5].setAttribute('id', 'm3-clicked');
+    inpuText[5].setAttribute('value', 'ADDED');
+    // console.log(mainButton3);
     localStorage.setItem('main-dish-3', saveRecipe);
   }
 };
@@ -383,9 +424,13 @@ var side1ButtonClickHandler = function(event){
   if (localStorage.getItem('side-dish-1')) {
     localStorage.removeItem('side-dish-1');
     sideButton1.setAttribute('class', '');
+    inpuText[6].setAttribute('id', 's1');
+    inpuText[6].setAttribute('value', 'ADD TO MENU');
   } else if(event.target.id === 'side-dish-1'){
     var saveRecipe = JSON.stringify(sideRecipeStuffing);
     sideButton1.setAttribute('class', 'selected');
+    inpuText[6].setAttribute('id', 's1-clicked');
+    inpuText[6].setAttribute('value', 'ADDED');
     localStorage.setItem('side-dish-1', saveRecipe);
   }
 };
@@ -399,9 +444,13 @@ var side2ButtonClickHandler = function(event){
   if (localStorage.getItem('side-dish-2')) {
     localStorage.removeItem('side-dish-2');
     sideButton2.setAttribute('class', '');
+    inpuText[7].setAttribute('id', 's2');
+    inpuText[7].setAttribute('value', 'ADD TO MENU');
   } else if(event.target.id === 'side-dish-2'){
     var saveRecipe = JSON.stringify(sideRecipeShallots);
     sideButton2.setAttribute('class', 'selected');
+    inpuText[7].setAttribute('id', 's2-clicked');
+    inpuText[7].setAttribute('value', 'ADDED');
     localStorage.setItem('side-dish-2', saveRecipe);
   }
 };
@@ -415,9 +464,13 @@ var side3ButtonClickHandler = function(event){
   if (localStorage.getItem('side-dish-3')) {
     localStorage.removeItem('side-dish-3');
     sideButton3.setAttribute('class', '');
+    inpuText[8].setAttribute('id', 's3');
+    inpuText[8].setAttribute('value', 'ADD TO MENU');
   } else if(event.target.id === 'side-dish-3'){
     var saveRecipe = JSON.stringify(sideRecipeRoastedBrussels);
     sideButton3.setAttribute('class', 'selected');
+    inpuText[8].setAttribute('id', 's3-clicked');
+    inpuText[8].setAttribute('value', 'ADDED');
     localStorage.setItem('side-dish-3', saveRecipe);
   }
 };
@@ -479,9 +532,13 @@ var dessert1ButtonClickHandler = function(event){
   if (localStorage.getItem('dessert-1')) {
     localStorage.removeItem('dessert-1');
     dessertButton1.setAttribute('class', '');
+    inpuText[9].setAttribute('id', 'd1');
+    inpuText[9].setAttribute('value', 'ADD TO MENU');
   } else if(event.target.id === 'dessert-1'){
     var saveRecipe = JSON.stringify(dessertRecipePumpkinPie);
     dessertButton1.setAttribute('class', 'selected');
+    inpuText[9].setAttribute('id', 'd1-clicked');
+    inpuText[9].setAttribute('value', 'ADDED');
     localStorage.setItem('dessert-1', saveRecipe);
   }
 };
@@ -496,9 +553,13 @@ var dessert2ButtonClickHandler = function(event){
   if (localStorage.getItem('dessert-2')) {
     localStorage.removeItem('dessert-2');
     dessertButton2.setAttribute('class', '');
+    inpuText[10].setAttribute('id', 'd2');
+    inpuText[10].setAttribute('value', 'ADD TO MENU');
   } else if(event.target.id === 'dessert-2'){
     var saveRecipe = JSON.stringify(dessertRecipeTart);
     dessertButton2.setAttribute('class', 'selected');
+    inpuText[10].setAttribute('id', 'd2-clicked');
+    inpuText[10].setAttribute('value', 'ADDED');
     localStorage.setItem('dessert-2', saveRecipe);
   }
 };
@@ -513,9 +574,13 @@ var dessert3ButtonClickHandler = function(event){
   if (localStorage.getItem('dessert-3')) {
     localStorage.removeItem('dessert-3');
     dessertButton3.setAttribute('class', '');
+    inpuText[11].setAttribute('id', 'd3');
+    inpuText[11].setAttribute('value', 'ADD TO MENU');
   } else if(event.target.id === 'dessert-3'){
     var saveRecipe = JSON.stringify(dessertRecipeArkansas);
     dessertButton3.setAttribute('class', 'selected');
+    inpuText[11].setAttribute('id', 'd3-clicked');
+    inpuText[11].setAttribute('value', 'ADDED');
     localStorage.setItem('dessert-3', saveRecipe);
   }
 };
@@ -530,9 +595,13 @@ var drink1ButtonClickHandler = function(event){
   if (localStorage.getItem('beverages-1')) {
     localStorage.removeItem('beverages-1');
     drinkButton1.setAttribute('class', '');
+    inpuText[12].setAttribute('id', 'b1');
+    inpuText[12].setAttribute('value', 'ADD TO MENU');
   } else if(event.target.id === 'beverages-1'){
     var saveRecipe = JSON.stringify(beverageRecipeCider);
     drinkButton1.setAttribute('class', 'selected');
+    inpuText[12].setAttribute('id', 'b1-clicked');
+    inpuText[12].setAttribute('value', 'ADDED');
     localStorage.setItem('beverages-1', saveRecipe);
   }
 };
@@ -547,9 +616,13 @@ var drink2ButtonClickHandler = function(event){
   if (localStorage.getItem('beverages-2')) {
     localStorage.removeItem('beverages-2');
     drinkButton2.setAttribute('class', '');
+    inpuText[13].setAttribute('id', 'b2');
+    inpuText[13].setAttribute('value', 'ADD TO MENU');
   } else if(event.target.id === 'beverages-2'){
     var saveRecipe = JSON.stringify(beverageRecipeSangria);
     drinkButton2.setAttribute('class', 'selected');
+    inpuText[13].setAttribute('id', 'b2-clicked');
+    inpuText[13].setAttribute('value', 'ADDED');
     localStorage.setItem('beverages-2', saveRecipe);
   }
 };
@@ -564,9 +637,13 @@ var drink3ButtonClickHandler = function(event){
   if (localStorage.getItem('beverages-3')) {
     localStorage.removeItem('beverages-3');
     drinkButton3.setAttribute('class', '');
+    inpuText[14].setAttribute('id', 'b3');
+    inpuText[14].setAttribute('value', 'ADD TO MENU');
   } else if(event.target.id === 'beverages-3'){
     var saveRecipe = JSON.stringify(beverageRecipePunch);
     drinkButton3.setAttribute('class', 'selected');
+    inpuText[14].setAttribute('id', 'b3-clicked');
+    inpuText[14].setAttribute('value', 'ADDED');
     localStorage.setItem('beverages-3', saveRecipe);
   }
 };

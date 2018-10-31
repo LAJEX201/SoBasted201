@@ -42,13 +42,17 @@ nav ul {
 
 nav ul li{
   display: inline-block;
-  background-color: rgb(192,0,0);
+  background-color: rgb(192, 0, 0);
   width: 217px;
   padding: 10px;
   margin-top: -10px;
-  margin-bottom: -10px;
+  margin-bottom: -1px;
   text-align: center;
   font-size: 18px;
+}
+
+nav ul li:hover{
+  background-color: rgb(110, 0, 0);
 }
 
 a{
@@ -64,6 +68,7 @@ body{
 
 body img{
   width: 960px;
+  margin-top: 3px;
 }
 
 hr{
@@ -94,6 +99,7 @@ hr{
   text-align: center;
   color: white;
   border-radius: 15px;
+  box-shadow: 4px 5px 2px rgb(150,0,0);
 }
 
 h5{
@@ -102,13 +108,22 @@ h5{
   margin-top: -1px;
   font-style: italic;
   font-size: 9px;
+  width: 100px;
+}
+
+h5.serving-size {
+  width: 100px;
+  float: right;
+  margin-right: 50px;
+  text-align: right;
+  margin-bottom: -30px;
 }
 
 .course > ul > li > img {
   width: 200px;
   margin-left: 50px;
   margin-right: 50px;
-  border: 3px solid rgb(192,0,0);
+  border: 3px solid rgb(192, 0, 0);
   border-radius: 15px;
 }
 
@@ -126,29 +141,50 @@ h5{
 }
 
 .sel {
-  width: 100px;
+  width: 95px;
   float: left;
-  height: 23px;
+  height: 28.4px;
   margin-left: 50px;
   margin-top: -8px;
+  font-family: 'Simonetta', cursive;
+  border: 2px solid rgb(192, 0, 0);
+  border-radius: 5px;
+  box-shadow: 0 2px 0 0 rgb(150, 0, 0);
 }
 
 input {
-  background-color: rgb(192,0,0);
+  background-color: rgb(192, 0, 0);
   color: white;
   font-family: 'Simonetta', cursive;
   padding: 4px 8px;
   border-radius: 5px;
   font-size: 12px;
   float: right;
-  margin-right: 50px;
-  margin-top: -8px;
-
+  margin-top: -28px;
+  margin-left: 150px;
+  box-shadow: 0 4px 0 0 rgb(150, 0, 0);
 }
+
+input:active {
+  box-shadow: none;
+}
+
+input:hover {
+  background-color: rgb(110, 0, 0);
+}
+
+input:focus {
+  outline: 0 !important;
+}
+
+/* .selected > fieldset > {
+  background-color: rgb yellow;
+} */
 
 div.photo-break {
   width: 960px;
-  height: 4px;
+  height: 20px;
+  margin-bottom: 27px;
 }
 
 div.photo-break img {
@@ -156,23 +192,403 @@ div.photo-break img {
 }
 
 button {
-  background-color: rgb(133, 190, 100);
+  background-color: rgb(192, 0, 0);
   font-family: 'Simonetta', cursive;
   color: white;
   font-size: 25px;
-  margin-top: -3px;
+  margin-top: 10px;
   width: 200px;
   margin-left: 375px;
-  margin-bottom: 1px;
+  margin-bottom: 17px;
   border-color: 1px solid white;
+  box-shadow: 0 4px 0 0 rgb(150, 0, 0);
+  border-radius: 5px;
+  padding:4px;
+}
+
+button:active {
+  box-shadow: none;
+}
+
+button:hover {
+  background-color: rgb(110, 0, 0);
+}
+
+button:focus {
+  outline: 0 !important;
+}
+
+#a1-clicked {
+  background-color: rgb(142, 165, 67);
+  font-family: 'Simonetta', cursive;
+  box-shadow: 0 4px 0 0 rgb(42, 49, 20);
+  border-color: 1px solid white;
+  width: 69.94px;
+  margin-left: 180px;
+  color:white;
+}
+
+#a1-clicked:active {
+  box-shadow: none;
+}
+
+#a1-clicked:hover {
+  background-color: rgb(72, 83, 34);
+}
+
+#a1-clicked:focus {
+  outline: 0 !important;
+}
+
+#a2-clicked {
+  background-color: rgb(142, 165, 67);
+  font-family: 'Simonetta', cursive;
+  box-shadow: 0 4px 0 0 rgb(42, 49, 20);
+  border-color: 1px solid white;
+  width: 69.94px;
+  margin-left: 180px;
+  color:white;
+}
+
+#a2-clicked:active {
+  box-shadow: none;
+}
+
+#a2-clicked:hover {
+  background-color: rgb(72, 83, 34);
+}
+
+#a2-clicked:focus {
+  outline: 0 !important;
+}
+
+#a3-clicked {
+  background-color: rgb(142, 165, 67);
+  font-family: 'Simonetta', cursive;
+  box-shadow: 0 4px 0 0 rgb(42, 49, 20);
+  border-color: 1px solid white;
+  width: 69.94px;
+  margin-left: 180px;
+  color:white;
+}
+
+#a3-clicked:active {
+  box-shadow: none;
+}
+
+#a3-clicked:hover {
+  background-color: rgb(72, 83, 34);
+}
+
+#a3-clicked:focus {
+  outline: 0 !important;
+}
+
+#m1-clicked {
+  background-color: rgb(142, 165, 67);
+  font-family: 'Simonetta', cursive;
+  box-shadow: 0 4px 0 0 rgb(42, 49, 20);
+  border-color: 1px solid white;
+  width: 69.94px;
+  margin-left: 180px;
+  color:white;
+}
+
+#m1-clicked:active {
+  box-shadow: none;
+}
+
+#m1-clicked:hover {
+  background-color: rgb(72, 83, 34);
+}
+
+#m1-clicked:focus {
+  outline: 0 !important;
+}
+
+#m2-clicked {
+  background-color: rgb(142, 165, 67);
+  font-family: 'Simonetta', cursive;
+  box-shadow: 0 4px 0 0 rgb(42, 49, 20);
+  border-color: 1px solid white;
+  width: 69.94px;
+  margin-left: 180px;
+  color:white;
+}
+
+#m2-clicked:active {
+  box-shadow: none;
+}
+
+#m2-clicked:hover {
+  background-color: rgb(72, 83, 34);
+}
+
+#m2-clicked:focus {
+  outline: 0 !important;
+}
+
+#m3-clicked {
+  background-color: rgb(142, 165, 67);
+  font-family: 'Simonetta', cursive;
+  box-shadow: 0 4px 0 0 rgb(42, 49, 20);
+  border-color: 1px solid white;
+  width: 69.94px;
+  margin-left: 180px;
+  color:white;
+}
+
+#m3-clicked:active {
+  box-shadow: none;
+}
+
+#m3-clicked:hover {
+  background-color: rgb(72, 83, 34);
+}
+
+#m3-clicked:focus {
+  outline: 0 !important;
+}
+
+#s1-clicked {
+  background-color: rgb(142, 165, 67);
+  font-family: 'Simonetta', cursive;
+  box-shadow: 0 4px 0 0 rgb(42, 49, 20);
+  border-color: 1px solid white;
+  width: 69.94px;
+  margin-left: 180px;
+  color:white;
+}
+
+#s1-clicked:active {
+  box-shadow: none;
+}
+
+#s1-clicked:hover {
+  background-color: rgb(72, 83, 34);
+}
+
+#s1-clicked:focus {
+  outline: 0 !important;
+}
+
+#s2-clicked {
+  background-color: rgb(142, 165, 67);
+  font-family: 'Simonetta', cursive;
+  box-shadow: 0 4px 0 0 rgb(42, 49, 20);
+  border-color: 1px solid white;
+  width: 69.94px;
+  margin-left: 180px;
+  color:white;
+}
+
+#s2-clicked:active {
+  box-shadow: none;
+}
+
+#s2-clicked:hover {
+  background-color: rgb(72, 83, 34);
+}
+
+#s2-clicked:focus {
+  outline: 0 !important;
+}
+
+#s3-clicked {
+  background-color: rgb(142, 165, 67);
+  font-family: 'Simonetta', cursive;
+  box-shadow: 0 4px 0 0 rgb(42, 49, 20);
+  border-color: 1px solid white;
+  width: 69.94px;
+  margin-left: 180px;
+  color:white;
+}
+
+#s3-clicked:active {
+  box-shadow: none;
+}
+
+#s3-clicked:hover {
+  background-color: rgb(72, 83, 34);
+}
+
+#s3-clicked:focus {
+  outline: 0 !important;
+}
+
+/* #s4-clicked {
+  background-color: rgb(142, 165, 67);
+  font-family: 'Simonetta', cursive;
+  box-shadow: 0 4px 0 0 rgb(42, 49, 20);
+  border-color: 1px solid white;
+  width: 69.94px;
+  margin-left: 180px;
+  color:white;
+}
+
+#s5-clicked {
+  background-color: rgb(142, 165, 67);
+  font-family: 'Simonetta', cursive;
+  box-shadow: 0 4px 0 0 rgb(42, 49, 20);
+  border-color: 1px solid white;
+  width: 69.94px;
+  margin-left: 180px;
+  color:white;
+}
+
+#s6-clicked {
+  background-color: rgb(142, 165, 67);
+  font-family: 'Simonetta', cursive;
+  box-shadow: 0 4px 0 0 rgb(42, 49, 20);
+  border-color: 1px solid white;
+  width: 69.94px;
+  margin-left: 180px;
+  color:white;
+} */
+
+#d1-clicked {
+  background-color: rgb(142, 165, 67);
+  font-family: 'Simonetta', cursive;
+  box-shadow: 0 4px 0 0 rgb(42, 49, 20);
+  border-color: 1px solid white;
+  width: 69.94px;
+  margin-left: 180px;
+  color:white;
+}
+
+#d1-clicked:active {
+  box-shadow: none;
+}
+
+#d1-clicked:hover {
+  background-color: rgb(72, 83, 34);
+}
+
+#d1-clicked:focus {
+  outline: 0 !important;
+}
+
+#d2-clicked {
+  background-color: rgb(142, 165, 67);
+  font-family: 'Simonetta', cursive;
+  box-shadow: 0 4px 0 0 rgb(42, 49, 20);
+  border-color: 1px solid white;
+  width: 69.94px;
+  margin-left: 180px;
+  color:white;
+}
+
+#d2-clicked:active {
+  box-shadow: none;
+}
+
+#d2-clicked:hover {
+  background-color: rgb(72, 83, 34);
+}
+
+#d2-clicked:focus {
+  outline: 0 !important;
+}
+
+#d3-clicked {
+  background-color: rgb(142, 165, 67);
+  font-family: 'Simonetta', cursive;
+  box-shadow: 0 4px 0 0 rgb(42, 49, 20);
+  border-color: 1px solid white;
+  width: 69.94px;
+  margin-left: 180px;
+  color:white;
+}
+
+#d3-clicked:active {
+  box-shadow: none;
+}
+
+#d3-clicked:hover {
+  background-color: rgb(72, 83, 34);
+}
+
+#d3-clicked:focus {
+  outline: 0 !important;
+}
+
+#b1-clicked {
+  background-color: rgb(142, 165, 67);
+  font-family: 'Simonetta', cursive;
+  box-shadow: 0 4px 0 0 rgb(42, 49, 20);
+  border-color: 1px solid white;
+  width: 69.94px;
+  margin-left: 180px;
+  color:white;
+}
+
+#b1-clicked:active {
+  box-shadow: none;
+}
+
+#b1-clicked:hover {
+  background-color: rgb(72, 83, 34);
+}
+
+#b1-clicked:focus {
+  outline: 0 !important;
+}
+
+#b2-clicked {
+  background-color: rgb(142, 165, 67);
+  font-family: 'Simonetta', cursive;
+  box-shadow: 0 4px 0 0 rgb(42, 49, 20);
+  border-color: 1px solid white;
+  width: 69.94px;
+  margin-left: 180px;
+  color:white;
+}
+
+#b2-clicked:active {
+  box-shadow: none;
+}
+
+#b2-clicked:hover {
+  background-color: rgb(72, 83, 34);
+}
+
+#b2-clicked:focus {
+  outline: 0 !important;
+}
+
+#b3-clicked {
+  background-color: rgb(142, 165, 67);
+  font-family: 'Simonetta', cursive;
+  box-shadow: 0 4px 0 0 rgb(42, 49, 20);
+  border-color: 1px solid white;
+  width: 69.94px;
+  margin-left: 180px;
+  color:white;
+}
+
+#b3-clicked:active {
+  box-shadow: none;
+}
+
+#b3-clicked:hover {
+  background-color: rgb(72, 83, 34);
+}
+
+#b3-clicked:focus {
+  outline: 0 !important;
 }
 
 fieldset {
   border: 0px;
+  width: 200px;
+  padding: 0px;
 }
+
 footer {
   font-family: 'Simonetta', cursive;
   text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 footer p:first-child {
