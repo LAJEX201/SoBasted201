@@ -202,3 +202,67 @@ clearCart.addEventListener('click', clearListClickHandler);
 // };
 
 // renderAsATableHeader();
+
+//make table for list html page
+var showListTable = function() {
+  var tableContainer = document.getElementById('shopping-list');
+
+  //we said for now we don't need to sort it by the category
+  // var storeIsle = ['Spices', 'Nuts', 'Dairy', 'Condiments', 'Produce', 'Other-Grocery', 'Baking', 'Meat', 'Frozen', 'Juice & Beverages', 'Wine & Liquor'];
+
+  //make header of table
+  var headerTrEl = document.createElement('tr');
+  var headElOne = document.createElement('th');
+  headElOne.textContent = 'Quantity';
+  var headElTwo = document.createElement('th');
+  headElTwo.textContent = 'Unit';
+  var headElThree = document.createElement('th');
+  headElThree.textContent = 'Description';
+  var headElFour = document.createElement('th');
+  headElFour.textContent = 'Store Isle';
+
+  headerTrEl.appendChild(headElOne);
+  headerTrEl.appendChild(headElTwo);
+  headerTrEl.appendChild(headElThree);
+  headerTrEl.appendChild(headElFour);
+
+  tableContainer.appendChild(headerTrEl);
+
+  // makes table details for shopping list
+  // console.log(uniqueIngre);
+  // console.log(ingreQty);
+  for (var i = 0; i < uniqueIngre.length; i++){
+    var trEl = document.createElement('tr');
+    // console.log('test ' + i);
+    var tempName = uniqueIngre[i];
+    // console.log(tempName);
+    console.log(ingreQty[tempName] + ' ' + ingreMeas[tempName]+ ' ' + tempName + ' ' + ingreLoc[tempName]);
+
+
+    //makes the qty of recipe
+    var tdQtyEl = document.createElement('td');
+    tdQtyEl.textContent = ingreQty[tempName];
+
+    // //makes the unit name
+    var tdUnitEl = document.createElement('td');
+    tdUnitEl.textContent = ingreMeas[tempName];
+
+    // //makes the description per recipe
+    var tdSDescripEl = document.createElement('td');
+    tdSDescripEl.textContent = tempName;
+
+    // //makes the store isle per recipe
+    var tdIsleEl = document.createElement('td');
+    tdIsleEl.textContent = ingreLoc[tempName];
+
+    // trEl.appendChild(tdLinkEl);
+    trEl.appendChild(tdQtyEl);
+    trEl.appendChild(tdUnitEl);
+    trEl.appendChild(tdSDescripEl);
+    trEl.appendChild(tdIsleEl);
+    tableContainer.appendChild(trEl);
+  }
+};
+
+showListTable();
+
