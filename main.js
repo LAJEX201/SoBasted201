@@ -271,43 +271,43 @@ if(localStorage.getItem('appetizer-1')){
 }
 
 if(localStorage.getItem('appetizer-2')){
-  inpuText[0].setAttribute('id', 'a2-clicked');
-  inpuText[0].setAttribute('value', 'ADDED');
+  inpuText[1].setAttribute('id', 'a2-clicked');
+  inpuText[1].setAttribute('value', 'ADDED');
 }
 
 if(localStorage.getItem('appetizer-3')){
-  inpuText[0].setAttribute('id', 'a3-clicked');
-  inpuText[0].setAttribute('value', 'ADDED');
+  inpuText[2].setAttribute('id', 'a3-clicked');
+  inpuText[2].setAttribute('value', 'ADDED');
 }
 
 if(localStorage.getItem('main-dish-1')){
-  inpuText[0].setAttribute('id', 'm1-clicked');
-  inpuText[0].setAttribute('value', 'ADDED');
+  inpuText[3].setAttribute('id', 'm1-clicked');
+  inpuText[3].setAttribute('value', 'ADDED');
 }
 
 if(localStorage.getItem('main-dish-2')){
-  inpuText[0].setAttribute('id', 'm2-clicked');
-  inpuText[0].setAttribute('value', 'ADDED');
+  inpuText[4].setAttribute('id', 'm2-clicked');
+  inpuText[4].setAttribute('value', 'ADDED');
 }
 
 if(localStorage.getItem('main-dish-3')){
-  inpuText[0].setAttribute('id', 'm3-clicked');
-  inpuText[0].setAttribute('value', 'ADDED');
+  inpuText[5].setAttribute('id', 'm3-clicked');
+  inpuText[5].setAttribute('value', 'ADDED');
 }
 
 if(localStorage.getItem('side-dish-1')){
-  inpuText[0].setAttribute('id', 's1-clicked');
-  inpuText[0].setAttribute('value', 'ADDED');
+  inpuText[6].setAttribute('id', 's1-clicked');
+  inpuText[6].setAttribute('value', 'ADDED');
 }
 
 if(localStorage.getItem('side-dish-2')){
-  inpuText[0].setAttribute('id', 's2-clicked');
-  inpuText[0].setAttribute('value', 'ADDED');
+  inpuText[7].setAttribute('id', 's2-clicked');
+  inpuText[7].setAttribute('value', 'ADDED');
 }
 
 if(localStorage.getItem('side-dish-3')){
-  inpuText[0].setAttribute('id', 's3-clicked');
-  inpuText[0].setAttribute('value', 'ADDED');
+  inpuText[8].setAttribute('id', 's3-clicked');
+  inpuText[8].setAttribute('value', 'ADDED');
 }
 
 // if(localStorage.getItem('side-dish-4')){
@@ -326,33 +326,33 @@ if(localStorage.getItem('side-dish-3')){
 // }
 
 if(localStorage.getItem('dessert-1')){
-  inpuText[0].setAttribute('id', 'd1-clicked');
-  inpuText[0].setAttribute('value', 'ADDED');
+  inpuText[9].setAttribute('id', 'd1-clicked');
+  inpuText[9].setAttribute('value', 'ADDED');
 }
 
 if(localStorage.getItem('dessert-2')){
-  inpuText[0].setAttribute('id', 'd2-clicked');
-  inpuText[0].setAttribute('value', 'ADDED');
+  inpuText[10].setAttribute('id', 'd2-clicked');
+  inpuText[10].setAttribute('value', 'ADDED');
 }
 
 if(localStorage.getItem('dessert-3')){
-  inpuText[0].setAttribute('id', 'd3-clicked');
-  inpuText[0].setAttribute('value', 'ADDED');
+  inpuText[11].setAttribute('id', 'd3-clicked');
+  inpuText[11].setAttribute('value', 'ADDED');
 }
 
 if(localStorage.getItem('beverages-1')){
-  inpuText[0].setAttribute('id', 'b1-clicked');
-  inpuText[0].setAttribute('value', 'ADDED');
+  inpuText[12].setAttribute('id', 'b1-clicked');
+  inpuText[12].setAttribute('value', 'ADDED');
 }
 
 if(localStorage.getItem('beverages-2')){
-  inpuText[0].setAttribute('id', 'b2-clicked');
-  inpuText[0].setAttribute('value', 'ADDED');
+  inpuText[13].setAttribute('id', 'b2-clicked');
+  inpuText[13].setAttribute('value', 'ADDED');
 }
 
 if(localStorage.getItem('beverages-3')){
-  inpuText[0].setAttribute('id', 'b3-clicked');
-  inpuText[0].setAttribute('value', 'ADDED');
+  inpuText[14].setAttribute('id', 'b3-clicked');
+  inpuText[14].setAttribute('value', 'ADDED');
 }
 /////////////////////////////////APPETIZER 1////////////////////////////////////////////////
 
