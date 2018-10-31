@@ -1,0 +1,68 @@
+body {
+  width:960px;
+}
+
+div.photo-break {
+  position: float;
+  width: 960x;
+}
+
+h2 {
+  margin: 5px;
+  text-align: center;
+}
+
+button {
+  background-color: rgb(192, 0, 0);
+  font-family: 'Simonetta', cursive;
+  color: white;
+  font-size: 25px;
+  margin-top: 10px;
+  width: 300px;
+  margin-bottom: 17px;
+  border-color: 1px solid white;
+  box-shadow: 0 4px 0 0 rgb(150, 0, 0);
+  border-radius: 5px;
+}
+
+button#buildshop {
+  float: left;
+  width: 300px;
+  margin: 90px;
+  margin-bottom: 30px;
+  margin-top: 26px;
+}
+
+button#goback {
+  float: right;
+  width: 300px;
+  margin: 90px;
+  margin-bottom: 30px;
+  margin-top: 26px;
+}
+
+table {
+  width: 960px;
+  text-align: left;
+  margin-top: -5px;
+}
+th {
+  background-color: rgb(192, 0, 0);
+  color: white;
+  font-family: 'Simonetta', cursive;
+  padding: 5px;
+  font-size: 16px;
+}
+td {
+  border-bottom: 2px solid rgb(192,0,0);
+  font-family: 'Simonetta', cursive;
+  padding: 5px;
+}
+
+td:first-child {
+  text-align: center;
+}
+td:nth-child(4) {
+  text-align: center;
+  padding: 0px;
+}

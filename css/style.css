@@ -189,7 +189,6 @@ div.photo-break {
 
 div.photo-break img {
   margin-top: -3px;
-  
 }
 
 button {
@@ -204,6 +203,7 @@ button {
   border-color: 1px solid white;
   box-shadow: 0 4px 0 0 rgb(150, 0, 0);
   border-radius: 5px;
+  padding:4px;
 }
 
 button:active {
@@ -216,6 +216,150 @@ button:hover {
 
 button:focus {
   outline: 0 !important;
+}
+
+#a1-clicked {
+  background-color: rgb(224, 200, 93);
+  font-family: 'Simonetta', cursive;
+  box-shadow: 0 4px 0 0 rgb(177, 144, 0);
+  border-color: 1px solid white;
+  color: rgb(110, 0, 0);
+}
+
+#a2-clicked {
+  background-color: rgb(224, 200, 93);
+  font-family: 'Simonetta', cursive;
+  box-shadow: 0 4px 0 0 rgb(177, 144, 0);
+  border-color: 1px solid white;
+  color: rgb(110, 0, 0);
+}
+
+#a3-clicked {
+  background-color: rgb(224, 200, 93);
+  font-family: 'Simonetta', cursive;
+  box-shadow: 0 4px 0 0 rgb(177, 144, 0);
+  border-color: 1px solid white;
+  color: rgb(110, 0, 0);
+}
+
+#m1-clicked {
+  background-color: rgb(224, 200, 93);
+  font-family: 'Simonetta', cursive;
+  box-shadow: 0 4px 0 0 rgb(177, 144, 0);
+  border-color: 1px solid white;
+  color: rgb(110, 0, 0);
+}
+
+#m2-clicked {
+  background-color: rgb(224, 200, 93);
+  font-family: 'Simonetta', cursive;
+  box-shadow: 0 4px 0 0 rgb(177, 144, 0);
+  border-color: 1px solid white;
+  color: rgb(110, 0, 0);
+}
+
+#m3-clicked {
+  background-color: rgb(224, 200, 93);
+  font-family: 'Simonetta', cursive;
+  box-shadow: 0 4px 0 0 rgb(177, 144, 0);
+  border-color: 1px solid white;
+  color: rgb(110, 0, 0);
+}
+
+#s1-clicked {
+  background-color: rgb(224, 200, 93);
+  font-family: 'Simonetta', cursive;
+  box-shadow: 0 4px 0 0 rgb(177, 144, 0);
+  border-color: 1px solid white;
+  color: rgb(110, 0, 0);
+}
+
+#s2-clicked {
+  background-color: rgb(224, 200, 93);
+  font-family: 'Simonetta', cursive;
+  box-shadow: 0 4px 0 0 rgb(177, 144, 0);
+  border-color: 1px solid white;
+  color: rgb(110, 0, 0);
+}
+
+#s3-clicked {
+  background-color: rgb(224, 200, 93);
+  font-family: 'Simonetta', cursive;
+  box-shadow: 0 4px 0 0 rgb(177, 144, 0);
+  border-color: 1px solid white;
+  color: rgb(110, 0, 0);
+}
+
+/* #s4-clicked {
+  background-color: rgb(224, 200, 93);
+  font-family: 'Simonetta', cursive;
+  box-shadow: 0 4px 0 0 rgb(177, 144, 0);
+  border-color: 1px solid white;
+  color: rgb(110, 0, 0);
+}
+
+#s5-clicked {
+  background-color: rgb(224, 200, 93);
+  font-family: 'Simonetta', cursive;
+  box-shadow: 0 4px 0 0 rgb(177, 144, 0);
+  border-color: 1px solid white;
+  color: rgb(110, 0, 0);
+}
+
+#s6-clicked {
+  background-color: rgb(224, 200, 93);
+  font-family: 'Simonetta', cursive;
+  box-shadow: 0 4px 0 0 rgb(177, 144, 0);
+  border-color: 1px solid white;
+  color: rgb(110, 0, 0);
+} */
+
+#d1-clicked {
+  background-color: rgb(224, 200, 93);
+  font-family: 'Simonetta', cursive;
+  box-shadow: 0 4px 0 0 rgb(177, 144, 0);
+  border-color: 1px solid white;
+  color: rgb(110, 0, 0);
+}
+
+#d2-clicked {
+  background-color: rgb(224, 200, 93);
+  font-family: 'Simonetta', cursive;
+  box-shadow: 0 4px 0 0 rgb(177, 144, 0);
+  border-color: 1px solid white;
+  color: rgb(110, 0, 0);
+}
+
+#d3-clicked {
+  background-color: rgb(224, 200, 93);
+  font-family: 'Simonetta', cursive;
+  box-shadow: 0 4px 0 0 rgb(177, 144, 0);
+  border-color: 1px solid white;
+  color: rgb(110, 0, 0);
+}
+
+#b1-clicked {
+  background-color: rgb(224, 200, 93);
+  font-family: 'Simonetta', cursive;
+  box-shadow: 0 4px 0 0 rgb(177, 144, 0);
+  border-color: 1px solid white;
+  color: rgb(110, 0, 0);
+}
+
+#b2-clicked {
+  background-color: rgb(224, 200, 93);
+  font-family: 'Simonetta', cursive;
+  box-shadow: 0 4px 0 0 rgb(177, 144, 0);
+  border-color: 1px solid white;
+  color: rgb(110, 0, 0);
+}
+
+#b3-clicked {
+  background-color: rgb(224, 200, 93);
+  font-family: 'Simonetta', cursive;
+  box-shadow: 0 4px 0 0 rgb(177, 144, 0);
+  border-color: 1px solid white;
+  color: rgb(110, 0, 0);
 }
 
 fieldset {
