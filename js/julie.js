@@ -372,6 +372,7 @@ if(localStorage.getItem('beverages-3')){
 //    julie starts her code 
 // ======================
 
+
 //make table for list html page
 var showListTable = function() {
   var tableContainer = document.getElementById('shopping-list');
@@ -381,6 +382,8 @@ var showListTable = function() {
 
   //make header of table
   var headerTrEl = document.createElement('tr');
+  var headElZero = document.createElement('th');
+  headElZero.textContent = 'Remove';
   var headElOne = document.createElement('th');
   headElOne.textContent = 'Quantity';
   var headElTwo = document.createElement('th');
@@ -390,6 +393,7 @@ var showListTable = function() {
   var headElFour = document.createElement('th');
   headElFour.textContent = 'Store Isle';
 
+  headerTrEl.appendChild(headElZero);
   headerTrEl.appendChild(headElOne);
   headerTrEl.appendChild(headElTwo);
   headerTrEl.appendChild(headElThree);
@@ -401,12 +405,20 @@ var showListTable = function() {
   // console.log(uniqueIngre);
   // console.log(ingreQty);
   for (var i = 0; i < uniqueIngre.length; i++){
-    var trEl = document.createElement('tr');
-    // console.log('test ' + i);
     var tempName = uniqueIngre[i];
-    // console.log(tempName);
-    console.log(ingreQty[tempName] + ' ' + ingreMeas[tempName]+ ' ' + tempName + ' ' + ingreLoc[tempName]);
 
+    //makes the x for delete
+    var labelEl = document.createElement('label');
+    var trEl = document.createElement('tr');
+    // var tdLinkEl = document.createElement('td');
+    var tdLiknkElInput = document.createElement('input');
+    tdLiknkElInput.type = ('checkbox');
+    // tdLiknkElInput.classList.add('removelistitem');
+    console.log('tempname ' + tempName);
+    tdLiknkElInput.id= tempName;
+    console.log('tdLiknkElInput.id ' + tdLiknkElInput.id);
+
+    labelEl.for=tempName;
 
     //makes the qty of recipe
     var tdQtyEl = document.createElement('td');
@@ -425,11 +437,15 @@ var showListTable = function() {
     tdIsleEl.textContent = ingreLoc[tempName];
 
     // trEl.appendChild(tdLinkEl);
+    // tdLinkEl.appendChild(tdLiknkElInput);
+    trEl.appendChild(tdLiknkElInput);
+    // trEl.appendChild(tdLinkEl);
     trEl.appendChild(tdQtyEl);
     trEl.appendChild(tdUnitEl);
     trEl.appendChild(tdSDescripEl);
     trEl.appendChild(tdIsleEl);
-    tableContainer.appendChild(trEl);
+    labelEl.appendChild(trEl);
+    tableContainer.appendChild(labelEl);
   }
 };
 
