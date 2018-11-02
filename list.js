@@ -4,8 +4,8 @@ var ingreQty = {};
 var ingreMeas = {};
 var ingreLoc = {};
 var uniqueIngre = [];
-var shopListTable = document.getElementById('shopping-list');
-var tableHeaders = ['Spices', 'Nuts', 'Dairy', 'Condiments', 'Produce', 'Other-Grocery', 'Baking', 'Meat', 'Frozen', 'Juice & Beverages', 'Wine & Liquor'];
+// var shopListTable = document.getElementById('shopping-list');
+// var tableHeaders = ['Spices', 'Nuts', 'Dairy', 'Condiments', 'Produce', 'Other-Grocery', 'Baking', 'Meat', 'Frozen', 'Juice & Beverages', 'Wine & Liquor'];
 
 //==============================================================================================================================================================================
 //  Math Function for Recipe and Multiplier

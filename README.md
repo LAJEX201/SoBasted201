@@ -33,9 +33,12 @@ REMINDER: only Julie is updating README, slack me your time you work on this pro
 
 ### Turkey logo:
   - https://www.petsmart.com/dog/toys/plush-toys/top-paw-fall-feast-turkey-dog-toy---plush-squeaker-51509.html
-### Photo rezier: 
+### Photo resizer: 
   - https://www.photoresizer.com/
 
+### Photo for "hero' image:
+  - https://pixabay.com/en/thanksgiving-cornucopia-fruit-3719247/
+  
 ### Recipes: 
   - https://www.finecooking.com/recipe/spiced-pecans
   - https://www.tasteofhome.com/recipes/apple-pecan-baked-brie/ 
@@ -116,7 +119,7 @@ REMINDER: only Julie is updating README, slack me your time you work on this pro
   - erin: presentation 630-930
   - erin and julie stayed to 1045 working presentation
 
-11-1-18 630-930
+11-1-18 630-1000
   - erin and xochil, worked on presentation slides
   - all worked on presentation prep
   - julie worked on read me
