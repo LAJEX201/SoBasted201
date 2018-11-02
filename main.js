@@ -20,21 +20,21 @@ var IngredientsConstructor = function (name, qty, measurementunit, location) {
 };
 
 RecipesConstructor.prototype.ingredientsArrayCreator = function (name, qty, measurementunit, location) {
-  var doesIngredientExist = false;
-  var indexOfIngredientExist = -1;
+  // var doesIngredientExist = false;
+  // var indexOfIngredientExist = -1;
 
-  for (var i = 0; i < this.ingredients; i ++){
-    if (name == this.ingredients[i].name){
-      indexOfIngredientExist = i;
-      doesIngredientExist = true;
-    }
-  }
-  if (doesIngredientExist){
-    this.ingredients[indexOfIngredientExist].quantity = this.ingredients[indexOfIngredientExist].quantity + qty;
-  } else {
+  // for (var i = 0; i < this.ingredients; i ++){
+  //   if (name == this.ingredients[i].name){
+  //     indexOfIngredientExist = i;
+  //     doesIngredientExist = true;
+  //   }
+  // }
+  // if (doesIngredientExist){
+  //   this.ingredients[indexOfIngredientExist].quantity = this.ingredients[indexOfIngredientExist].quantity + qty;
+  // } else {
     var ingredOne = new IngredientsConstructor (name, qty, measurementunit, location);
     this.ingredients.push(ingredOne);
-  }
+  // }
 };
 
 var selectOptions = function(){
