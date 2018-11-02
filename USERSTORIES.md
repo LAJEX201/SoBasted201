@@ -1,7 +1,13 @@
 # USER
+1. As a user, I want access to a variety of recipies that I can choose to create a menu.
+2. As a user, I want the recipies I want to visually see which recipies I have chosen.
+3. As a user, I want to the ability to remove or add additional recipies after I have made my initial selections.
+4. As a user, I want any single ingredient that occurs in multiple selected recipes   to be displayed only once, and to be summed together.
+5. As a user, I want to see the specific store location where I can find each ingredient selected.
+6. As a user, I want a simple way to clear my menu selections and begin again.
+7. As a user, I want a shopping list rendered that I can easily print.
 
-
-#H1 DEVELOPER
+# DEVELOPER
 
 1. As the developer, we will create a Recipe Home Page with listings of recipes for the users to choose from. This will be accomplished by creating objects of recipes and ingredients.    
 ```var Recipes = function(){
