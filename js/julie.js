@@ -378,7 +378,7 @@ var showListTable = function() {
   var tableContainer = document.getElementById('shopping-list');
 
   //we said for now we don't need to sort it by the category
-  // var storeIsle = ['Spices', 'Nuts', 'Dairy', 'Condiments', 'Produce', 'Other-Grocery', 'Baking', 'Meat', 'Frozen', 'Juice & Beverages', 'Wine & Liquor'];
+  var storeIsle = ['SPICES', 'NUTS', 'DAIRY', 'CONDIMENTS', 'PRODUCE', 'OTHER-GROCERY', 'BAKING', 'MEAT', 'FROZEN', 'JUICE & BEVERAGES', 'WINE & LIQUOR'];
 
   //make header of table
   var headerTrEl = document.createElement('tr');
@@ -401,51 +401,53 @@ var showListTable = function() {
 
   tableContainer.appendChild(headerTrEl);
 
-  // makes table details for shopping list
-  // console.log(uniqueIngre);
-  // console.log(ingreQty);
+  for (var y = 0; y < storeIsle.length; y++) {
   for (var i = 0; i < uniqueIngre.length; i++){
     var tempName = uniqueIngre[i];
 
-    //makes the x for delete
-    var labelEl = document.createElement('label');
-    var trEl = document.createElement('tr');
-    // var tdLinkEl = document.createElement('td');
-    var tdLiknkElInput = document.createElement('input');
-    tdLiknkElInput.type = ('checkbox');
-    // tdLiknkElInput.classList.add('removelistitem');
-    console.log('tempname ' + tempName);
-    tdLiknkElInput.id= tempName;
-    console.log('tdLiknkElInput.id ' + tdLiknkElInput.id);
+    // do {
+      console.log('i ' + i);
+      console.log('y ' + y);
+      console.log('ingreLoc[tempName] ' + ingreLoc[tempName]);
+      console.log('storeIsle ' + storeIsle);
+      console.log('storeIsle[i] ' + storeIsle[y]);
 
-    labelEl.for=tempName;
+      //makes the checkbox for strike
+    if(ingreLoc[tempName] === storeIsle[y]) {
+      console.log('in if statement');
+      var trEl = document.createElement('tr');
+      var tdCheckboxInputEl = document.createElement('input');
+      var tdCheckboxLabelEl = document.createElement('label');
+      tdCheckboxInputEl.type = ('checkbox');
+      tdCheckboxInputEl.id= tempName;
+      tdCheckboxLabelEl.for=tempName;
 
-    //makes the qty of recipe
-    var tdQtyEl = document.createElement('td');
-    tdQtyEl.textContent = ingreQty[tempName];
+      //makes the qty of recipe
+      var tdQtyEl = document.createElement('td');
+      tdQtyEl.textContent = ingreQty[tempName];
 
-    // //makes the unit name
-    var tdUnitEl = document.createElement('td');
-    tdUnitEl.textContent = ingreMeas[tempName];
+      // //makes the unit name
+      var tdUnitEl = document.createElement('td');
+      tdUnitEl.textContent = ingreMeas[tempName];
 
-    // //makes the description per recipe
-    var tdSDescripEl = document.createElement('td');
-    tdSDescripEl.textContent = tempName;
+      // //makes the description per recipe
+      var tdSDescripEl = document.createElement('td');
+      tdSDescripEl.textContent = tempName;
 
-    // //makes the store isle per recipe
-    var tdIsleEl = document.createElement('td');
-    tdIsleEl.textContent = ingreLoc[tempName];
+      // //makes the store isle per recipe
+      var tdIsleEl = document.createElement('td');
+      tdIsleEl.textContent = ingreLoc[tempName];
 
-    // trEl.appendChild(tdLinkEl);
-    // tdLinkEl.appendChild(tdLiknkElInput);
-    trEl.appendChild(tdLiknkElInput);
-    // trEl.appendChild(tdLinkEl);
-    trEl.appendChild(tdQtyEl);
-    trEl.appendChild(tdUnitEl);
-    trEl.appendChild(tdSDescripEl);
-    trEl.appendChild(tdIsleEl);
-    labelEl.appendChild(trEl);
-    tableContainer.appendChild(labelEl);
+      trEl.appendChild(tdCheckboxInputEl);
+      trEl.appendChild(tdCheckboxLabelEl);
+      tdCheckboxLabelEl.appendChild(tdQtyEl);
+      tdCheckboxLabelEl.appendChild(tdUnitEl);
+      tdCheckboxLabelEl.appendChild(tdSDescripEl);
+      tdCheckboxLabelEl.appendChild(tdIsleEl);
+      tableContainer.appendChild(trEl);
+    // } while (ingreLoc[tempName] === storeIsle[i]);
+    }
+  }
   }
 };
 

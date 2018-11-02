@@ -128,5 +128,5 @@ REMINDER: only Julie is updating README, slack me your time you work on this pro
   - 
 11-2-18
   -julie: cleaned up all files (moving extras to folders, adding comments as needed, removing comments that aren't needed anymore) about 2 hours
-  - 
+  - julie, stretch goal, strike through on ingred list, about 2.5 hrs
   -  -->
