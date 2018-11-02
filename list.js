@@ -1,5 +1,7 @@
 'use strict';
 
+// Javascript code for the List.HTML page. Checks if recipe is in local Storage, if yes then collects the ingredients, their quantities, measurement type, and store isle. Then renders a table to the page. Also provides a button that clears out local storage and takes you back to INDEX.html
+
 //variables for making the ingredients list
 var ingreQty = {};
 var ingreMeas = {};
