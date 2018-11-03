@@ -16,11 +16,7 @@ REMINDER: only Julie is updating README, slack me your time you work on this pro
 #### Math Functions
 #### Reference data from local storage that loops  through all ingredients in the selected recipe to combine and manipulate the stored data 
 
-
-
 ### No libraries, frameworks, or packages used. 
-<!-- REMINDER: comment code of functions (what they do) or describe relationships between two variables -->
-
 
 <!-- ====================================== -->
 ## REFERENCES
@@ -33,9 +29,12 @@ REMINDER: only Julie is updating README, slack me your time you work on this pro
 
 ### Turkey logo:
   - https://www.petsmart.com/dog/toys/plush-toys/top-paw-fall-feast-turkey-dog-toy---plush-squeaker-51509.html
-### Photo rezier: 
+### Photo resizer: 
   - https://www.photoresizer.com/
 
+### Photo for "hero' image:
+  - https://pixabay.com/en/thanksgiving-cornucopia-fruit-3719247/
+  
 ### Recipes: 
   - https://www.finecooking.com/recipe/spiced-pecans
   - https://www.tasteofhome.com/recipes/apple-pecan-baked-brie/ 
@@ -58,6 +57,9 @@ REMINDER: only Julie is updating README, slack me your time you work on this pro
   - https://sallysbakingaddiction.com/the-great-pumpkin-pie-recipe/
 
 <!-- ====================================== -->
+
+<!-- FYI about resent.css: we had added the reset css but forgot to actaully fill in the document. Had completed our CSS and realized reset was empty/blank. We populated reset with a standard reset from online and it messed up our css. So we intentionally chose to omit the reset.css because it was too late to add it in and fix the CSS changes it would have caused. -->
+
 <!--TIME TRACKER PER GROUP AGREEMENT
 10-24-18 630-930
   - Xochil, Erin and Julie Pair programed scaffold for aboutUs.html
@@ -116,7 +118,7 @@ REMINDER: only Julie is updating README, slack me your time you work on this pro
   - erin: presentation 630-930
   - erin and julie stayed to 1045 working presentation
 
-11-1-18 630-930
+11-1-18 630-1000
   - erin and xochil, worked on presentation slides
   - all worked on presentation prep
   - julie worked on read me
@@ -125,6 +127,7 @@ REMINDER: only Julie is updating README, slack me your time you work on this pro
   - 
   - 
 11-2-18
-  -julie: cleaned up all files (moving extras to folders, adding comments as needed, removing comments that aren't needed anymore)
-  - 
+  -julie: cleaned up all files (moving extras to folders, adding comments as needed, removing comments that aren't needed anymore) about 2 hours
+  - julie, stretch goal, strike through on ingred list, about 2.5 hrs
+  - julie stretch goal, shoping list by category, about .5 hours
   -  -->
