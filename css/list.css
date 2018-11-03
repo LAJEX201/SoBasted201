@@ -55,9 +55,6 @@ input:checked + label {
   text-decoration-style: wavy;
   color:rgb(150,0,0);
   box-shadow: none;
-  /* border-bottom: 2px solid blue; */
-  /* top: 20px; */
-  /* position: absolute; */
 }
 
 input {
@@ -107,9 +104,4 @@ label > td:last-child {
 #clear-cart {
   width:200px;
   margin-left: 380px;
-}
-
-input:checked + label {
-  text-decoration: line-through;
-  color: red;
 }
