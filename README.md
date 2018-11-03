@@ -128,6 +128,12 @@ REMINDER: only Julie is updating README, slack me your time you work on this pro
   - 
 11-2-18
   -julie: cleaned up all files (moving extras to folders, adding comments as needed, removing comments that aren't needed anymore) about 2 hours
-  - julie, stretch goal, strike through on ingred list, about 2.5 hrs
-  - julie stretch goal, shoping list by category, about .5 hours
-  -  -->
+  - julie, stretch goal, 3 hrs, strike through on ingred list, shoping list by category,
+  -  erin, 3 hours fixing list.css for strikethroughs. Also added classes to th's via list.js. Fixed a typo in the store category in main.js and moved appetizers before main dishes in the menu.js table render
+
+11-3-18 900-1230
+  - team practice presentation
+  - erin continued to mess with css
+  - julie continued updating readme
+  - anthony and lorin continued to work on stretch goal for multiple batches
+  -->

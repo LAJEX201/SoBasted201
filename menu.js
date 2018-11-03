@@ -34,7 +34,7 @@ var MenuItem = function(name, course, servings, ingredients, localName) {
   this.localName = localName;
 };
 
-//saves recipes in local storage in an array 
+//saves recipes in local storage in an array
 Menu.prototype.saveToLocalStorage = function() {
   localStorage.setItem('menu', JSON.stringify(this.recipe));
 };
