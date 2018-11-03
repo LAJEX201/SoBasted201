@@ -127,7 +127,7 @@ menuclick.addEventListener('click', removeItemFromMenu);
 var menu = new Menu([]);
 
 //these are localstorage names
-var allRecipeHTMLIds = ['main-dish-1','main-dish-2','main-dish-3','appetizer-1','appetizer-2','appetizer-3','side-dish-1','side-dish-2','side-dish-3','dessert-1','dessert-2','dessert-3','beverages-1','beverages-2','beverages-3'];
+var allRecipeHTMLIds = ['appetizer-1','appetizer-2','appetizer-3','main-dish-1','main-dish-2','main-dish-3','side-dish-1','side-dish-2','side-dish-3','dessert-1','dessert-2','dessert-3','beverages-1','beverages-2','beverages-3'];
 
 //var parsedRecipeFromLocStor;
 for (var p= 0; p < allRecipeHTMLIds.length; p++) {

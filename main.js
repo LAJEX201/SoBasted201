@@ -222,7 +222,7 @@ beverageRecipeSangria.ingredientsArrayCreator('cinnamon sticks', 2, 'each', 'spi
 beverageRecipeSangria.ingredientsArrayCreator('pears', 1, 'each', 'produce');
 beverageRecipeSangria.ingredientsArrayCreator('oranges', 1, 'each', 'produce');
 beverageRecipeSangria.ingredientsArrayCreator('pomegranate seeds', 0.666, 'cups', 'produce');
-beverageRecipeSangria.ingredientsArrayCreator('white wine (750 ml bottle)', 1, 'each', 'liquor');
+beverageRecipeSangria.ingredientsArrayCreator('white wine (750 ml bottle)', 1, 'each', 'wine & liquor');
 beverageRecipeSangria.ingredientsArrayCreator('apple cider', 2, 'cups', 'juice');
 beverageRecipeSangria.ingredientsArrayCreator('brandy', 0.5, 'cups', 'wine & liquor');
 beverageRecipeSangria.ingredientsArrayCreator('orange juice', 0.25, 'cups', 'juice & beverages');
