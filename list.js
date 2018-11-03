@@ -146,20 +146,25 @@ var showListTable = function() {
   var tableContainer = document.getElementById('shopping-list');
 
   //array so can sort it by the category
-  var storeIsle = ['SPICES', 'NUTS', 'DAIRY', 'CONDIMENTS', 'PRODUCE', 'OTHER-GROCERY', 'BAKING', 'MEAT', 'FROZEN', 'JUICE & BEVERAGES', 'WINE & LIQUOR'];
+  var storeAisle = ['SPICES', 'NUTS', 'DAIRY', 'CONDIMENTS', 'PRODUCE', 'OTHER-GROCERY', 'BAKING', 'MEAT', 'FROZEN', 'JUICE & BEVERAGES', 'WINE & LIQUOR'];
 
   //make header of table
   var headerTrEl = document.createElement('tr');
   var headElZero = document.createElement('th');
-  headElZero.textContent = 'Remove';
+  headElZero.textContent = 'REMOVE';
+  headElZero.setAttribute('id', 'remove');
   var headElOne = document.createElement('th');
-  headElOne.textContent = 'Quantity';
+  headElOne.textContent = 'QUANTITY';
+  headElOne.setAttribute('id', 'quantity');
   var headElTwo = document.createElement('th');
-  headElTwo.textContent = 'Unit';
+  headElTwo.textContent = 'UNIT';
+  headElTwo.setAttribute('id', 'unit');
   var headElThree = document.createElement('th');
-  headElThree.textContent = 'Description';
+  headElThree.textContent = 'DESCRIPTION';
+  headElThree.setAttribute('id', 'Description');
   var headElFour = document.createElement('th');
-  headElFour.textContent = 'Store Isle';
+  headElFour.textContent = 'STORE AISLE';
+  headElFour.setAttribute('id', 'aisle');
 
   headerTrEl.appendChild(headElZero);
   headerTrEl.appendChild(headElOne);
@@ -169,12 +174,15 @@ var showListTable = function() {
 
   tableContainer.appendChild(headerTrEl);
 
-  for (var y = 0; y < storeIsle.length; y++) {
+  for (var y = 0; y < storeAisle.length; y++) {
+
     for (var i = 0; i < uniqueIngre.length; i++){
       var tempName = uniqueIngre[i];
 
       //makes the checkbox for strike
-      if(ingreLoc[tempName] === storeIsle[y]) {
+
+      if(ingreLoc[tempName] === storeAisle[y]) {
+
         console.log('in if statement');
         var trEl = document.createElement('tr');
         var tdCheckboxInputEl = document.createElement('input');
@@ -195,7 +203,8 @@ var showListTable = function() {
         var tdSDescripEl = document.createElement('td');
         tdSDescripEl.textContent = tempName;
 
-        // //makes the store isle per recipe
+        // //makes the store aisle per recipe
+
         var tdIsleEl = document.createElement('td');
         tdIsleEl.textContent = ingreLoc[tempName];
 
