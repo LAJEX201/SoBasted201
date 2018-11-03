@@ -135,4 +135,5 @@ REMINDER: only Julie is updating README, slack me your time you work on this pro
   - team practice presentation
   - erin continued to mess with css
   - julie continued updating readme
+  - anthony and lorin continued to work on stretch goal for multiple batches
   -->

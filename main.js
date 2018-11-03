@@ -38,6 +38,7 @@ var selectOptions = function(){
 };
 selectOptions();
 
+//recipe and ingredient constructors
 var appRecipePecan = new RecipesConstructor('SPICED PECANS', 16, 'APPETIZER');
 appRecipePecan.ingredientsArrayCreator('salt', 4, 'teaspoons', 'spices');
 appRecipePecan.ingredientsArrayCreator('cayenne', 0.5, 'teaspoons', 'spices');
@@ -56,7 +57,6 @@ appRecipeBrie.ingredientsArrayCreator('dried cranberries', 0.333, 'cups', 'other
 appRecipeBrie.ingredientsArrayCreator('pecans', 0.25, 'cups', 'nuts');
 appRecipeBrie.ingredientsArrayCreator('brown sugar', .0625, 'cups', 'baking');
 appRecipeBrie.ingredientsArrayCreator('cinnamon', 0.25, 'teaspoons', 'spices');
-// appRecipeBrie.ingredientsArrayCreator('ground nutmeg', 1, 'dash', 'spices');
 appRecipeBrie.ingredientsArrayCreator('Brie cheese', 1, 'cups', 'dairy');
 appRecipeBrie.ingredientsArrayCreator('package crackers', 2, 'each', 'other-grocery');
 
@@ -314,8 +314,8 @@ if(localStorage.getItem('beverages-3')){
   inpuText[14].setAttribute('id', 'b3-clicked');
   inpuText[14].setAttribute('value', 'ADDED');
 }
-/////////////////////////////////APPETIZER 1////////////////////////////////////////////////
 
+//click handlers for adding/removing recipes from local storage
 var app1ButtonClickHandler = function(event){
   event.preventDefault();
   if (localStorage.getItem('appetizer-1')) {
@@ -334,7 +334,6 @@ var app1ButtonClickHandler = function(event){
 var appButton1 = document.getElementById('appetizer-1');
 appButton1.addEventListener('submit', app1ButtonClickHandler);
 
-/////////////////////////////////APPETIZER 2////////////////////////////////////////////////
 var app2ButtonClickHandler = function(event){
   event.preventDefault();
   if (localStorage.getItem('appetizer-2')) {
@@ -352,8 +351,6 @@ var app2ButtonClickHandler = function(event){
 };
 var appButton2 = document.getElementById('appetizer-2');
 appButton2.addEventListener('submit', app2ButtonClickHandler);
-
-/////////////////////////////////APPETIZER 3////////////////////////////////////////////////
 
 var app3ButtonClickHandler = function(event){
   event.preventDefault();
@@ -373,8 +370,6 @@ var app3ButtonClickHandler = function(event){
 var appButton3 = document.getElementById('appetizer-3');
 appButton3.addEventListener('submit', app3ButtonClickHandler);
 
-/////////////////////////////////MAIN 1/////////////////////////////////////
-
 var main1ButtonClickHandler = function(event){
   event.preventDefault();
   if (localStorage.getItem('main-dish-1')) {
@@ -393,8 +388,6 @@ var main1ButtonClickHandler = function(event){
 var mainButton1 = document.getElementById('main-dish-1');
 mainButton1.addEventListener('submit', main1ButtonClickHandler);
 
-/////////////////////////////////MAIN 2/////////////////////////////////////
-
 var main2ButtonClickHandler = function(event){
   event.preventDefault();
   if (localStorage.getItem('main-dish-2')) {
@@ -412,8 +405,6 @@ var main2ButtonClickHandler = function(event){
 };
 var mainButton2 = document.getElementById('main-dish-2');
 mainButton2.addEventListener('submit', main2ButtonClickHandler);
-
-/////////////////////////////////MAIN 3/////////////////////////////////////
 
 var main3ButtonClickHandler = function(event){
   event.preventDefault();
@@ -434,8 +425,6 @@ var main3ButtonClickHandler = function(event){
 var mainButton3 = document.getElementById('main-dish-3');
 mainButton3.addEventListener('submit', main3ButtonClickHandler);
 
-/////////////////////////////////SIDE 1/////////////////////////////////////
-
 var side1ButtonClickHandler = function(event){
   event.preventDefault();
   if (localStorage.getItem('side-dish-1')) {
@@ -453,8 +442,6 @@ var side1ButtonClickHandler = function(event){
 };
 var sideButton1 = document.getElementById('side-dish-1');
 sideButton1.addEventListener('submit', side1ButtonClickHandler);
-
-/////////////////////////////////SIDE 2/////////////////////////////////////
 
 var side2ButtonClickHandler = function(event){
   event.preventDefault();
@@ -474,8 +461,6 @@ var side2ButtonClickHandler = function(event){
 var sideButton2 = document.getElementById('side-dish-2');
 sideButton2.addEventListener('submit', side2ButtonClickHandler);
 
-/////////////////////////////////SIDE 3/////////////////////////////////////
-
 var side3ButtonClickHandler = function(event){
   event.preventDefault();
   if (localStorage.getItem('side-dish-3')) {
@@ -493,8 +478,6 @@ var side3ButtonClickHandler = function(event){
 };
 var sideButton3 = document.getElementById('side-dish-3');
 sideButton3.addEventListener('submit', side3ButtonClickHandler);
-
-//////////////////////////////DESSERT 1/////////////////////////////////////
 
 var dessert1ButtonClickHandler = function(event){
   event.preventDefault();
@@ -514,8 +497,6 @@ var dessert1ButtonClickHandler = function(event){
 var dessertButton1 = document.getElementById('dessert-1');
 dessertButton1.addEventListener('submit', dessert1ButtonClickHandler);
 
-//////////////////////////////DESSERT 2/////////////////////////////////////
-
 var dessert2ButtonClickHandler = function(event){
   event.preventDefault();
   if (localStorage.getItem('dessert-2')) {
@@ -533,8 +514,6 @@ var dessert2ButtonClickHandler = function(event){
 };
 var dessertButton2 = document.getElementById('dessert-2');
 dessertButton2.addEventListener('submit', dessert2ButtonClickHandler);
-
-//////////////////////////////DESSERT 3/////////////////////////////////////
 
 var dessert3ButtonClickHandler = function(event){
   event.preventDefault();
@@ -554,8 +533,6 @@ var dessert3ButtonClickHandler = function(event){
 var dessertButton3 = document.getElementById('dessert-3');
 dessertButton3.addEventListener('submit', dessert3ButtonClickHandler);
 
-/////////////////////////////////BEVERAGE 1/////////////////////////////////////
-
 var drink1ButtonClickHandler = function(event){
   event.preventDefault();
   if (localStorage.getItem('beverages-1')) {
@@ -574,8 +551,6 @@ var drink1ButtonClickHandler = function(event){
 var drinkButton1 = document.getElementById('beverages-1');
 drinkButton1.addEventListener('submit', drink1ButtonClickHandler);
 
-/////////////////////////////////BEVERAGE 2/////////////////////////////////////
-
 var drink2ButtonClickHandler = function(event){
   event.preventDefault();
   if (localStorage.getItem('beverages-2')) {
@@ -593,8 +568,6 @@ var drink2ButtonClickHandler = function(event){
 };
 var drinkButton2 = document.getElementById('beverages-2');
 drinkButton2.addEventListener('submit', drink2ButtonClickHandler);
-
-/////////////////////////////////BEVERAGE 3/////////////////////////////////////
 
 var drink3ButtonClickHandler = function(event){
   event.preventDefault();
