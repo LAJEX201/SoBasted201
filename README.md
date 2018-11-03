@@ -1,5 +1,4 @@
-REMINDER: only Julie is updating README, slack me your time you work on this proj and what you worked on so I can keep updating this document.
-
+<!-- REMINDER: only Julie is updating README, slack me your time you work on this proj and what you worked on so I can keep updating this document. -->
 ![team logo](./images/TeamTurkeyLogo.png "Team Turkey Logo")
 # SoBasted201
 ## Head chefs: 
