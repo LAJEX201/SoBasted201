@@ -175,11 +175,14 @@ var showListTable = function() {
   tableContainer.appendChild(headerTrEl);
 
   for (var y = 0; y < storeAisle.length; y++) {
+
     for (var i = 0; i < uniqueIngre.length; i++){
       var tempName = uniqueIngre[i];
 
       //makes the checkbox for strike
+
       if(ingreLoc[tempName] === storeAisle[y]) {
+
         console.log('in if statement');
         var trEl = document.createElement('tr');
         var tdCheckboxInputEl = document.createElement('input');
@@ -201,6 +204,7 @@ var showListTable = function() {
         tdSDescripEl.textContent = tempName;
 
         // //makes the store aisle per recipe
+
         var tdIsleEl = document.createElement('td');
         tdIsleEl.textContent = ingreLoc[tempName];
 

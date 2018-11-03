@@ -108,3 +108,8 @@ label > td:last-child {
   width:200px;
   margin-left: 380px;
 }
+
+input:checked + label {
+  text-decoration: line-through;
+  color: red;
+}
